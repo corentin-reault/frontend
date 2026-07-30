@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" data-i18n-meta="site-desc" content="Corentin Réault - Ingénieur SysOps & Réseau. Portfolio professionnel - Kubernetes, Cloud, Réseau, Automatisation.">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <title data-i18n="site-title">Corentin Réault - Ingénieur SysOps &amp; Réseau</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://reault.tech/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reault.tech/">
+    <meta property="og:title" data-i18n-meta="site-title" content="Corentin Réault - Ingénieur SysOps & Réseau">
+    <meta property="og:description" data-i18n-meta="site-desc" content="Corentin Réault - Ingénieur SysOps & Réseau. Portfolio professionnel - Kubernetes, Cloud, Réseau, Automatisation.">
+    <meta property="og:image" content="https://reault.tech/assets/img/profile-img.jpg">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="640">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:site_name" content="Corentin Réault">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n-meta="site-title" content="Corentin Réault - Ingénieur SysOps & Réseau">
+    <meta name="twitter:description" data-i18n-meta="site-desc" content="Corentin Réault - Ingénieur SysOps & Réseau. Portfolio professionnel.">
+    <meta name="twitter:image" content="https://reault.tech/assets/img/profile-img.jpg">
+    <meta name="twitter:domain" content="reault.tech">
+
+    <!-- Hreflang for multilingual -->
+    <link rel="alternate" hreflang="fr" href="https://reault.tech/">
+    <link rel="alternate" hreflang="en" href="https://reault.tech/">
+    <link rel="alternate" hreflang="x-default" href="https://reault.tech/">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0a0f1a" id="theme-color-meta">
+
+    <!-- Cache busting version (injected at build time) -->
+    <meta name="build-version" content="{{VERSION}}" id="build-version-meta">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://reault.tech" crossorigin>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="./libs/bootstrap-5.2.3-dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="./assets/css/style.css" as="style">
+    <link rel="preload" href="./libs/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js" as="script">
+
+    <!-- Critical CSS inlined for above-the-fold rendering -->
+    <style>
+        /* Design tokens matching style.css */
+        :root{--color-primary:#38bdf8;--color-primary-dim:#0ea5e9;--color-bg:#0a0f1a;--color-surface:#111827;--color-surface-alt:#1a2235;--color-border:#2a3447;--color-text:#e2e8f0;--color-text-muted:#94a3b8;--color-text-dim:#64748b;--color-heading:#f1f5f9;--color-accent-bg:rgba(56,189,248,0.08);--font-heading:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;--font-body:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;--space-md:1rem;--space-lg:1.5rem;--space-xl:2rem;--space-2xl:3rem;--space-3xl:4rem;--radius-md:10px;--radius-full:9999px;--shadow-md:0 4px 12px rgba(0,0,0,0.4);--shadow-lg:0 8px 30px rgba(0,0,0,0.5);--ease-out:cubic-bezier(0.16,1,0.3,1);--transition-base:250ms var(--ease-out);--transition-fast:150ms ease;--nav-bg:rgba(15,23,42,0.85);--hero-gradient-bg:linear-gradient(135deg,#0c1220 0%,#111d33 50%,#0f1623 100%);--hero-overlay:linear-gradient(180deg,rgba(10,15,26,0.3) 0%,rgba(10,15,26,0.8) 100%);--contact-overlay:linear-gradient(135deg,rgba(10,15,26,0.75) 0%,rgba(15,22,35,0.65) 40%,rgba(10,15,26,0.85) 100%)}
+        *,*::before,*::after{box-sizing:border-box}
+        body{margin:0;padding:0;font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--color-text);background:var(--color-bg);-webkit-font-smoothing:antialiased}
+        /* Top nav */
+                .top-navbar{position:fixed;top:0;left:0;right:0;height:60px;z-index:10000;background:rgba(15,23,42,0.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--color-border)}
+                .top-nav-logo{font-size:1.05rem;font-weight:700;color:var(--color-heading);text-decoration:none}
+                .top-nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:1100px;margin:0 auto;padding:0 var(--space-xl)}
+                .top-nav-menu{display:flex;align-items:center;gap:var(--space-md);list-style:none;margin:0;padding:0}
+                .nav-link{display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-sm) var(--space-md);color:var(--color-text);text-decoration:none;font-size:0.95rem;font-weight:500;border-radius:var(--radius-md);transition:color var(--transition-fast),background var(--transition-fast)}
+                .nav-link:hover,.nav-link.active{color:var(--color-primary);background:var(--color-accent-bg)}
+                .nav-link i{font-size:1.1rem}
+                .top-nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(255,255,255,0.05);border:1px solid var(--color-border);border-radius:var(--radius-md);color:var(--color-heading);font-size:1.2rem;cursor:pointer;transition:all var(--transition-fast)}
+                .top-nav-toggle:hover{background:rgba(255,255,255,0.1);border-color:var(--color-primary)}
+                .nav-dropdown{position:relative}
+                .dropdown-toggle::after{content:'';margin-left:4px;border:4px solid transparent;border-top-color:var(--color-text-muted);transition:transform var(--transition-fast)}
+                .nav-dropdown:hover .dropdown-toggle::after,.nav-dropdown:focus-within .dropdown-toggle::after{transform:rotate(180deg)}
+                .dropdown-menu{position:absolute;top:100%;left:0;min-width:200px;background:var(--nav-mobile-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--color-border);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:var(--space-sm) 0;list-style:none;margin:0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity var(--transition-fast), visibility var(--transition-fast), transform var(--transition-fast);z-index:1000;display:none}
+                .dropdown-menu::before{content:'';position:absolute;top:-4px;left:0;right:0;height:8px;background:transparent}
+                .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);display:block}
+                .dropdown-menu .nav-link{padding:var(--space-sm) var(--space-lg);font-size:0.9rem}
+                .top-nav-lang{display:flex;gap:4px;margin-left:var(--space-lg);padding-left:var(--space-lg);border-left:1px solid var(--color-border)}
+                .lang-btn{padding:4px 10px;font-size:0.8rem;font-weight:600;color:var(--color-text-muted);background:transparent;border:1px solid transparent;border-radius:var(--radius-full);cursor:pointer;transition:all var(--transition-fast)}
+                .lang-btn.active,.lang-btn:hover{color:var(--color-primary);border-color:var(--color-primary);background:var(--color-accent-bg)}
+                .theme-toggle{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.05);border:1px solid var(--color-border);border-radius:var(--radius-md);color:var(--color-text);cursor:pointer;transition:all var(--transition-fast)}
+                .theme-toggle:hover{background:rgba(255,255,255,0.1);border-color:var(--color-primary);color:var(--color-primary)}
+                /* Mobile nav */
+                @media(max-width:992px){
+                    .top-nav-toggle{display:flex}
+                    .top-nav-menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--nav-mobile-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--color-border);border-top:1px solid var(--color-border);padding:var(--space-md) 0;gap:2px;box-shadow:0 20px 40px -12px rgba(0,0,0,0.6);animation:mobileNavIn 0.2s ease-out}
+                    @keyframes mobileNavIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+                    .top-nav-menu.open{display:flex}
+                    .top-nav-menu .nav-link{padding:12px 20px;margin:0 8px;border-radius:var(--radius-md);font-size:0.95rem}
+                    .top-nav-menu .nav-link:hover{background:rgba(56,189,248,0.08)}
+                    .top-nav-menu .nav-link.active{background:rgba(56,189,248,0.12);color:var(--color-primary)}
+                    .dropdown-menu{position:static;display:none;background:rgba(0,0,0,0.25);border:none;border-radius:var(--radius-md);box-shadow:none;padding:4px 0;margin:2px 8px}
+                    .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:block}
+                    .dropdown-menu .nav-link{padding:10px 16px 10px 32px;font-size:0.9rem}
+                    .top-nav-lang{display:none}
+                    .theme-toggle{display:none}
+                }
+                /* Mobile lang/theme in menu */
+                @media(max-width:992px){
+                    .nav-lang-mobile{display:flex!important;flex-direction:column;padding:var(--space-md) var(--space-lg);border-top:1px solid var(--color-border);margin-top:var(--space-sm)}
+                    .nav-lang-mobile .top-nav-lang-mobile-inner{display:flex;gap:8px}
+                    .nav-theme-mobile{margin-top:var(--space-md);padding-top:var(--space-md);border-top:1px solid var(--color-border)}
+                }
+                /* Hero */
+                #particles-js{position:absolute;inset:0;z-index:0;background:var(--hero-gradient-bg)}
+                .hero-content{position:relative;z-index:2;max-width:640px;padding:var(--space-3xl);text-align:center}
+                #homepage h1{margin:0 0 var(--space-md);font-family:var(--font-heading);font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;background:var(--hero-heading-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:var(--color-heading)}
+                #homepage p{font-size:clamp(1rem,2.5vw,1.4rem);color:var(--color-text-muted);margin:0;font-weight:400}
+                #homepage p span{color:var(--color-primary);padding-bottom:4px;letter-spacing:1px;border-bottom:2px solid var(--color-primary)}
+                .hero-avatar img{width:100px;height:100px;border-radius:50%;border:3px solid var(--color-primary);margin:0 auto;display:block}
+                .hero-subtitle{font-size:1.1rem;color:var(--color-text-muted);margin:0 0 var(--space-md)}
+                .hero-contact-links{display:flex;justify-content:center;gap:var(--space-md);margin-bottom:var(--space-xl)}
+                .hero-contact-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.06);color:var(--color-text-muted);font-size:1rem;text-decoration:none;border:1px solid var(--color-border)}
+                /* Main */
+                #main{min-height:100vh;background:var(--color-bg)}
+                .container,.container-fluid{max-width:1100px;margin:0 auto;padding:0 var(--space-xl)}
+                section{padding:var(--space-3xl) 0}
+                .section-title{margin-bottom:var(--space-2xl)}
+                .section-title h2{font-family:var(--font-heading);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--color-heading);display:inline-block;position:relative;padding-bottom:var(--space-md);margin-bottom:var(--space-md)}
+                .section-title h2::after{content:'';position:absolute;bottom:0;left:0;width:48px;height:3px;background:var(--color-primary);border-radius:var(--radius-full)}
+                .section-title p{color:var(--color-text-muted);margin-bottom:0}
+                .cta-button{display:inline-flex;align-items:center;gap:var(--space-sm);padding:12px 28px;background:var(--color-primary);color:#fff;font-size:0.95rem;font-weight:600;border-radius:var(--radius-full);text-decoration:none;border:none;cursor:pointer}
+                [data-aos]{opacity:1!important;transform:none!important}
+                .skip-link{position:absolute;top:-100%;left:0;z-index:10000;padding:12px 24px;background:var(--color-primary);color:#fff;font-weight:600;text-decoration:none;transition:top .2s}
+                .skip-link:focus{top:0}
+                *:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px}
+                @media(prefers-reduced-motion:reduce){
+                    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+                    [data-aos]{opacity:1!important;transform:none!important}
+                }
+                /* Page loader overlay - tech theme */
+                #page-loader{position:fixed;inset:0;z-index:20000;background:var(--color-bg);display:flex;align-items:center;justify-content:center;transition:opacity 400ms var(--ease-out),visibility 400ms var(--ease-out)}
+                #page-loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+                .loader-core{position:relative;width:80px;height:80px}
+                .loader-ring{position:absolute;inset:0;border:3px solid transparent;border-top-color:var(--color-primary);border-radius:50%;animation:spin 1.2s linear infinite}
+                .loader-ring:nth-child(2){width:60%;height:60%;top:20%;left:20%;border-top-color:var(--color-primary-dim);animation-direction:reverse;animation-duration:1.8s}
+                .loader-ring:nth-child(3){width:40%;height:40%;top:30%;left:30%;border-top-color:var(--color-primary);animation-duration:2.4s}
+                .loader-pulse{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at center,var(--color-primary) 0%,transparent 70%);opacity:0;animation:pulse 2s ease-out infinite}
+                @keyframes spin{to{transform:rotate(360deg)}}
+                @keyframes pulse{0%{transform:scale(0.5);opacity:0.6}100%{transform:scale(1.5);opacity:0}}
+                .loader-text{margin-top:1.5rem;font-size:0.85rem;font-weight:500;color:var(--color-text-muted);letter-spacing:0.15em;text-transform:uppercase;animation:fadeInOut 2s ease-in-out infinite}
+                @keyframes fadeInOut{0%,100%{opacity:0.4}50%{opacity:1}}
+                /* Page load animation - only animate navbar and hero (non-AOS), let AOS handle sections */
+                .page-loaded .top-navbar,
+                .page-loaded .hero-content:not([data-aos]) { opacity: 1; transform: none; }
+                .top-navbar,
+                .hero-content:not([data-aos]) { opacity: 0; transform: translateY(20px); transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out); }
+                .top-navbar { transition-delay: 0ms; }
+                .hero-content:not([data-aos]) { transition-delay: 100ms; }
+                @media(prefers-reduced-motion:reduce){
+                    .top-navbar,
+                    .hero-content:not([data-aos]) { opacity: 1; transform: none; transition: none; }
+                }
+                /* Mobile nav */
+                @media(max-width:992px){
+                    #homepage{min-height:100vh;padding-top:80px;padding-bottom:var(--space-2xl)}
+                    #homepage h1{font-size:clamp(1.6rem,4vw,2.2rem)}
+                    .hero-avatar img{width:80px;height:80px}
+                }
+    </style>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Defer non-critical CSS: loaded after page render -->
+    <link rel="preload" href="./libs/bootstrap-5.2.3-dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="./libs/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+    <link rel="preload" href="./libs/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="./libs/aos/aos.css" rel="stylesheet"></noscript>
+    <link rel="preload" href="./libs/fontawesome-free-6.4.2-web/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="./libs/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet"></noscript>
+    <link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="./assets/css/style.css" rel="stylesheet"></noscript>
+</head>
+<body>
+    <!-- Skip navigation link for keyboard users -->
+    <a href="#main" class="skip-link" data-i18n="skip-link">Skip to main content</a>
+
+    <!-- Page loader overlay (shown until everything is ready) -->
+    <div id="page-loader" role="status" aria-label="Chargement de la page">
+      <div class="loader-core">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-pulse"></div>
+      </div>
+      <div class="loader-text" data-i18n="loader-text">Loading</div>
+    </div>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Corentin Réault",
+          "jobTitle": ["Ingénieur SysOps", "SysOps Engineer"],
+          "url": "https://reault.tech/",
+          "image": "https://reault.tech/assets/img/profile-img.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/corentin-reault/",
+            "https://github.com/corentin-reault",
+            "https://git.reault.tech/"
+          ],
+          "knowsAbout": ["Kubernetes", "Cloud Computing", "Réseau", "DevOps", "Sécurité", "Linux"],
+          "alumniOf": "Université de Technologie de Troyes (UTT)",
+          "email": "corentin.reault@protonmail.com"
+        },
+        {
+          "@type": "WebSite",
+          "name": "Corentin Réault",
+          "url": "https://reault.tech/",
+          "description": "Portfolio professionnel de Corentin Réault - Ingénieur SysOps & Réseau",
+          "inLanguage": ["fr", "en"],
+          "author": {
+            "@type": "Person",
+            "name": "Corentin Réault"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://reault.tech/#homepage" },
+            { "@type": "ListItem", "position": 2, "name": "CV", "item": "https://reault.tech/#resume" },
+            { "@type": "ListItem", "position": 3, "name": "Parcours", "item": "https://reault.tech/#timeline" },
+            { "@type": "ListItem", "position": 4, "name": "Compétences", "item": "https://reault.tech/#skills" },
+            { "@type": "ListItem", "position": 5, "name": "Certifications", "item": "https://reault.tech/#certifications" },
+            { "@type": "ListItem", "position": 6, "name": "Contact", "item": "https://reault.tech/#contact" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+        <!-- Top Navigation Bar -->
+    <nav id="topnav" class="top-navbar" role="navigation" aria-label="Main navigation">
+        <div class="top-nav-inner">
+            <a href="#homepage" class="top-nav-logo scrollto">Corentin Réault</a>
+            <button class="top-nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="top-nav-menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul class="top-nav-menu" id="top-nav-menu" role="list">
+                                <li><a href="#homepage" class="nav-link scrollto active"><i class="fa-solid fa-house" aria-hidden="true"></i> <span data-i18n="nav-home">Accueil</span></a></li>
+                                                    <li><a href="#resume" class="nav-link scrollto"><i class="fa-solid fa-file" aria-hidden="true"></i> <span data-i18n="nav-resume">CV</span></a></li>
+                                                    <li><a href="#timeline" class="nav-link scrollto"><i class="fa-solid fa-road" aria-hidden="true"></i> <span data-i18n="nav-timeline">Parcours</span></a></li>
+                                                    <li class="nav-dropdown">
+                                                        <a href="#skills" class="nav-link scrollto dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> <span data-i18n="nav-portfolio">Portfolio</span> <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#skills" class="nav-link scrollto" data-i18n="nav-skills-dropdown">Compétences</a></li>
+                                                            <li><a href="#certifications" class="nav-link scrollto" data-i18n="nav-certs-dropdown">Certifications</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#recommendations" class="nav-link scrollto"><i class="fa-solid fa-heart-circle-check" aria-hidden="true"></i> <span data-i18n="nav-recommendations">Recommandations</span></a></li>
+                                                    <li><a href="#contact" class="nav-link scrollto"><i class="fa-solid fa-envelope-open" aria-hidden="true"></i> <span data-i18n="nav-contact">Contact</span></a></li>
+                <li class="nav-lang-mobile" role="group" aria-label="Language selection">
+                    <hr class="nav-divider">
+                    <div class="top-nav-lang-mobile-inner">
+                        <button class="lang-btn active" lang="fr" aria-pressed="true" data-lang="fr">FR</button>
+                        <button class="lang-btn" lang="en" aria-pressed="false" data-lang="en">EN</button>
+                    </div>
+                </li>
+                <li class="nav-theme-mobile">
+                    <button class="theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Toggle light/dark mode">
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i> <span data-i18n="theme-dark">Mode sombre</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="top-nav-lang" role="group" aria-label="Language selection">
+                <button class="lang-btn active" lang="fr" aria-pressed="true" data-lang="fr">FR</button>
+                <button class="lang-btn" lang="en" aria-pressed="false" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+        <!-- Hero / Homepage -->
+    <section id="homepage" class="hero-section" aria-labelledby="hero-heading">
+        <div id="particles-js" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+                <div class="hero-content" data-aos="fade-up">
+                    <picture class="hero-avatar">
+                                    <source srcset="./assets/img/profile-img.webp" type="image/webp">
+                                    <img src="./assets/img/profile-img.jpg" alt="Photo de Corentin Réault" data-i18n-alt="profile-alt" class="img-fluid rounded-circle" width="110" height="110" fetchpriority="high" decoding="async">
+                                </picture>
+                    <h1 id="hero-heading">Corentin Réault</h1>
+                    <p style="margin-bottom: var(--space-lg);"><span class="typing-wrapper"><span class="typed" data-typed-items-fr="Ingénieur réseau, Ingénieur SysOps" data-typed-items-en="Network Engineer, SysOps Engineer"></span></span></p>
+                    <div class="hero-contact-links">
+                <a href="mailto:corentin.reault@protonmail.com" class="hero-contact-btn" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/corentin-reault/" class="hero-contact-btn" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/corentin-reault" class="hero-contact-btn" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+            <a href="#contact" class="cta-button scrollto" aria-label="Get in touch - go to contact section">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span data-i18n="hero-cta">Me contacter</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main" role="main">
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume" aria-labelledby="resume-heading">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2 id="resume-heading" data-i18n="resume-title">CV</h2>
+                    <p data-i18n="resume-desc">Passionné par tous les domaines de l'informatique, mon parcours se focalise surtout sur le réseau ainsi que l'administration système.</p>
+                    <a href="assets/cv-corentin-reault.pdf" class="cv-download-btn" target="_blank" rel="noopener" data-i18n="cv-download">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger le CV (PDF)
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-lg" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="resume-title" data-i18n="resume-exp-title">Expériences Professionelles</h3>
+                        <div class="resume-item">
+                            <h4 data-i18n="exp-1-title">Ingénieur SysOps</h4>
+                            <h5 data-i18n="exp-1-date">Mars 2024 - Aujourd'hui</h5>
+                            <p><em data-i18n="exp-1-company">Rakuten France</em></p>
+                            <ul class="resume-bullets">
+                                                            <li data-i18n="exp-1-desc-1">Conception et optimisation d'architectures de reverse proxy / load balancing assurant haute disponibilité et déploiements sans interruption.</li>
+                                                            <li data-i18n="exp-1-desc-2">Mise en oeuvre d'une architecture sécurisée conforme PCI-DSS avec segmentation réseau et déploiement d'une DMZ pour les services web.</li>
+                                                            <li data-i18n="exp-1-desc-3">Pilotage technique de la création d'un cloud privé : industrialisation via Terraform, provisionning, configuration initiale, et coordination réseau inter-partenaires.</li>
+                                                            <li data-i18n="exp-1-desc-4">Déploiement et maintien de clusters Kubernetes, industrialisation des déploiements via Helm Charts (Go Templates) et accompagnement dans la migration des applications de Docker vers Kubernetes.</li>
+                                                            <li data-i18n="exp-1-desc-5">Migration de l'infrastructure d'automatisation de SaltStack vers Ansible, et industrialisation du provisioning et de la configuration de l'infrastructure via Terraform et Ansible.</li>
+                                                        </ul>
+                        </div>
+
+                        <div class="resume-item">
+                            <h4 data-i18n="exp-2-title">Stage - Architecte réseau</h4>
+                            <h5 data-i18n="exp-2-date">Aout 2023 - Février 2024</h5>
+                            <p><em data-i18n="exp-2-company">CEA-DAM</em></p>
+                            <ul class="resume-bullets">
+                                <li data-i18n="exp-2-desc-1">Participation à un projet de restructuration du réseau grâce à des technologies d'opérateurs et de data center</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="resume-title" data-i18n="resume-edu-title">Formations</h3>
+                        <div class="resume-item">
+                            <h4 data-i18n="edu-4-title">CKS - Certified Kubernetes Security Specialist</h4>
+                            <h5 data-i18n="edu-4-date">Mai 2026</h5>
+                            <p><em data-i18n="edu-4-school">The Linux Foundation</em></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4 data-i18n="edu-3-title">CKA - Certified Kubernetes Administrator</h4>
+                            <h5 data-i18n="edu-3-date">Avril 2026</h5>
+                            <p><em data-i18n="edu-3-school">The Linux Foundation</em></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4 data-i18n="edu-1-title">Ingénieur réseau et télécommunications</h4>
+                            <h5 data-i18n="edu-1-date">2018 - 2024</h5>
+                            <p><em data-i18n="edu-1-school">Université de technologie de Troyes</em></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4 data-i18n="edu-2-title">Elektrotechnik und Informationstechnik</h4>
+                            <h5 data-i18n="edu-2-date">Mars 2023 - Aout 2023</h5>
+                            <p><em data-i18n="edu-2-school">Darmstadt University of Applied Sciences</em></p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="resume-title" data-i18n="resume-lang-title">Langues maitrisées</h3>
+                            <div class="resume-item">
+                                <h4 data-i18n="lang-1-title">Anglais</h4>
+                                <p><em data-i18n="lang-1-detail">Linguaskills - niveau B2+/C1</em></p>
+                            </div>
+                            <div class="resume-item">
+                                <h4 data-i18n="lang-2-title">Allemand</h4>
+                                <p><em data-i18n="lang-2-detail">Goethe Pro Test - Niveau A2/B1</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Timeline / Parcours Section -->
+        <section id="timeline" class="timeline" aria-labelledby="timeline-heading">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2 id="timeline-heading" data-i18n="timeline-title">Parcours</h2>
+                    <p data-i18n="timeline-desc">Mon parcours en un coup d'œil.</p>
+                </div>
+                <div class="timeline-layout">
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="tl-1-title">Ingénieur réseau et télécommunications</h3>
+                            <p class="timeline-sub" data-i18n="tl-1-sub">Université de technologie de Troyes</p>
+                            <span class="timeline-date" data-i18n="tl-1-date">2018 - 2024</span>
+                            <p data-i18n="tl-1-desc">Formation d'ingénieur généraliste avec spécialisation en réseaux et télécommunications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="timeline-marker"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="tl-2-title">Stage - Architecte réseau</h3>
+                            <p class="timeline-sub" data-i18n="tl-2-sub">CEA-DAM</p>
+                            <span class="timeline-date" data-i18n="tl-2-date">Août 2023 - Février 2024</span>
+                            <p data-i18n="tl-2-desc">Projet de restructuration du réseau sur des technologies opérateur et data center.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="tl-3-title">Ingénieur SysOps</h3>
+                            <p class="timeline-sub" data-i18n="tl-3-sub">Rakuten France</p>
+                            <span class="timeline-date" data-i18n="tl-3-date">Mars 2024 - Aujourd'hui</span>
+                            <p data-i18n="tl-3-desc">Reverse proxy / load balancing, architecture PCI-DSS, cloud privé (Terraform, Ansible), clusters Kubernetes et pipelines CI/CD.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="timeline-marker"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="tl-4-title">CKA - Certified Kubernetes Administrator</h3>
+                            <p class="timeline-sub" data-i18n="tl-4-sub">The Linux Foundation</p>
+                            <span class="timeline-date" data-i18n="tl-4-date">Avril 2026</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="tl-5-title">CKS - Certified Kubernetes Security Specialist</h3>
+                            <p class="timeline-sub" data-i18n="tl-5-sub">The Linux Foundation</p>
+                            <span class="timeline-date" data-i18n="tl-5-date">Mai 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills / Competency File Section -->
+        <section id="skills" class="skills competency-file" aria-labelledby="skills-heading">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2 id="skills-heading" data-i18n="skills-title">Dossier de compétences</h2>
+                    <p data-i18n="skills-desc">Un référentiel structuré de mes compétences techniques, par domaine, avec le niveau de maîtrise et le contexte d'application réel. Les niveaux sont auto-évalués et ancrés dans mon expérience concrète.</p>
+                </div>
+
+                <!-- Domaine 1 -->
+                <div class="competency-domain" data-aos="fade-up" data-aos-delay="150">
+                    <div class="competency-domain-head">
+                        <h3 class="competency-domain-title"><i class="fa-solid fa-cloud" aria-hidden="true"></i> <span data-i18n="dom1-title">Infrastructures, Cloud & Conteneurisation</span></h3>
+                        <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                    </div>
+                    <div class="competency-grid">
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-cubes"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-k8s-title">Kubernetes</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-k8s-desc">Déploiement et opération de clusters en environnements de test et de production (3 nœuds control-plane, 6 à 9+ workers). Rédaction de charts Helm maison et accompagnement d'équipes sur les bonnes pratiques. Déploiements industrialisés via helmfile et pipelines CI/CD, avec GitOps en perspective. CKA + CKS ; sécurisation des clusters en production en cours (RBAC notamment).</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="210">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-infinity"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-cicd-title">CI/CD & Automatisation</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-cicd-desc">Migration Jenkins → GitHub Actions (gains de vitesse, factorisation, robustesse) et conception de pipelines d'entreprise. Intégration de checks Consul avec arrêt automatique d'urgence en cas d'anomalie détectée.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="270">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-cube"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-terraform-title">Terraform (IaC)</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-terraform-desc">Provisioning from scratch et création de modules réutilisables pour les équipes. Providers : Proxmox (bpg), phpIPAM, PowerDNS, VMware. Maîtrise de l'idempotence, des boucles et de la manipulation des states.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="330">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-cogs"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-ansible-title">Ansible</h4>
+                                    <span class="competency-level level-intermediate" data-i18n="lvl-intermediate">Intermédiaire</span>
+                                </div>
+                                <p data-i18n="c-ansible-desc">Playbooks, inventaires dynamiques, host_vars/group_vars (provisioning & configuration). Vue complémentaire avec NixOS : exécution distante et administration de parc vs configuration locale déclarative.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:65%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="390">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-cloud"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-ovh-title">OVH Public Cloud (K8s managé)</h4>
+                                    <span class="competency-level level-personal" data-i18n="lvl-personal">Personnel</span>
+                                </div>
+                                <p data-i18n="c-ovh-desc">Expérience sur infrastructure personnelle : site public auto-hébergé sur un cluster Kubernetes managé OVH Public Cloud.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:55%"></span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Domaine 2 -->
+                <div class="competency-domain" data-aos="fade-up" data-aos-delay="200">
+                    <div class="competency-domain-head">
+                        <h3 class="competency-domain-title"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> <span data-i18n="dom2-title">Réseau & Sécurité</span></h3>
+                        <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                    </div>
+                    <div class="competency-grid">
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-routing-title">Routing & Switching (multi-vendor)</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-routing-desc">Conception de zones OSPF et redistribution. Expérience de production sur Cisco, Arista, Extreme et Aruba. LACP (actif/passif, actif/actif).</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="260">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-sitemap"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-evpn-title">EVPN-VXLAN</h4>
+                                    <span class="competency-level level-intermediate" data-i18n="lvl-intermediate">Intermédiaire</span>
+                                </div>
+                                <p data-i18n="c-evpn-desc">Maîtrise des principes underlay/overlay et du multihoming ; mise en œuvre dans un projet de restructuration réseau.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:65%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="320">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-firewall-title">Sécurité réseau & Firewall</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-firewall-desc">Stormshield en production, iptables maîtrisé. Finalisation de la mise en place d'une architecture segmentée avec DMZ conforme PCI-DSS, à partir d'un schéma existant.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="380">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-key"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-wireguard-title">WireGuard</h4>
+                                    <span class="competency-level level-operational" data-i18n="lvl-operational">Opérationnel</span>
+                                </div>
+                                <p data-i18n="c-wireguard-desc">Déploiements en environnement professionnel et personnel.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:80%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="440">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-bug"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-cilium-title">Cilium / eBPF</h4>
+                                    <span class="competency-level level-intermediate" data-i18n="lvl-intermediate">Intermédiaire</span>
+                                </div>
+                                <p data-i18n="c-cilium-desc">Déployé en environnement de test, en attente de mise en production.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:65%"></span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Domaine 3 -->
+                <div class="competency-domain" data-aos="fade-up" data-aos-delay="250">
+                    <div class="competency-domain-head">
+                        <h3 class="competency-domain-title"><i class="fa-solid fa-server" aria-hidden="true"></i> <span data-i18n="dom3-title">Système, Observabilité & Reverse Proxy</span></h3>
+                        <span class="competency-level level-expert" data-i18n="lvl-expert">Expert</span>
+                    </div>
+                    <div class="competency-grid">
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-brands fa-linux"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-linux-title">Linux</h4>
+                                    <span class="competency-level level-expert" data-i18n="lvl-expert-advanced">Expert / Avancé</span>
+                                </div>
+                                <p data-i18n="c-linux-desc">Daily driver Ubuntu (production) et RHEL ; NixOS et Arch en personnel. Angles d'approfondissement en cours (SELinux/AppArmor, rsyslog).</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:95%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="310">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-brands fa-docker"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-containers-title">Conteneurisation (Docker & Podman)</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-containers-desc">Maîtrise des deux outils, y compris en mode rootless.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="370">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-observability-title">Observabilité</h4>
+                                    <span class="competency-level level-expert" data-i18n="lvl-expert">Expert</span>
+                                </div>
+                                <p data-i18n="c-observability-desc">Déploiement et maîtrise complète de la chaîne (VMagent/scraping, règles Grok de parsing de logs, PromQL, Alertmanager → Slack). Stack Prometheus / VictoriaMetrics.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:95%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="430">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-balance-scale-left"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-lb-title">Reverse Proxy & Load Balancing</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-lb-desc">Refonte d'une architecture existante mal optimisée (schéma validé, déploiement test puis prod). Reverse proxy L7, health checks, backends de secours, sans SSL termination. Projet à enjeu (continuité des ventes).</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Domaine 4 -->
+                <div class="competency-domain" data-aos="fade-up" data-aos-delay="300">
+                    <div class="competency-domain-head">
+                        <div>
+                            <h3 class="competency-domain-title"><i class="fa-solid fa-code" aria-hidden="true"></i> <span data-i18n="dom4-title">Programmation & Automatisation</span></h3>
+                            <p class="competency-domain-subtitle" data-i18n="dom4-subtitle">Ingénieur qui code pour automatiser, pas développeur</p>
+                        </div>
+                        <span class="competency-level level-intermediate" data-i18n="lvl-intermediate">Intermédiaire</span>
+                    </div>
+                    <div class="competency-grid">
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-brands fa-python"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-python-title">Python</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-python-desc">Scripting, applications d'automatisation (ex. webhook Alertmanager → tentative de remédiation automatique des microservices pour réduire les astreintes), templating Jinja2 (Ansible/SaltStack).</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="360">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-go-title">Go</h4>
+                                    <span class="competency-level level-intermediate" data-i18n="lvl-intermediate">Intermédiaire</span>
+                                </div>
+                                <p data-i18n="c-go-desc">Petits binaires d'automatisation réutilisables et Go templating pour configurations Consul automatiques.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:65%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="420">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-terminal"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-bash-title">Bash</h4>
+                                    <span class="competency-level level-expert" data-i18n="lvl-expert">Expert</span>
+                                </div>
+                                <p data-i18n="c-bash-desc">Scripts quotidiens et one-liners d'administration.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:95%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="480">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-brands fa-java"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-java-title">Compréhension Java</h4>
+                                    <span class="competency-level level-culture" data-i18n="lvl-culture">Culture</span>
+                                </div>
+                                <p data-i18n="c-java-desc">Acquisition en formation ; permet la lecture de stacks backend et la collaboration amont avec les équipes de développement.</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:45%"></span></div>
+                            </div>
+                        </article>
+                        <article class="competency-card" data-aos="fade-up" data-aos-delay="540">
+                            <div class="competency-card-icon" aria-hidden="true"><i class="fa-solid fa-file-code"></i></div>
+                            <div class="competency-card-body">
+                                <div class="competency-card-head">
+                                    <h4 data-i18n="c-iac-title">IaC (YAML / HCL)</h4>
+                                    <span class="competency-level level-advanced" data-i18n="lvl-advanced">Avancé</span>
+                                </div>
+                                <p data-i18n="c-iac-desc">Terraform, Ansible, GitHub Actions (langages de description et de déclaration).</p>
+                                <div class="competency-meter" aria-hidden="true"><span style="--lvl:88%"></span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications" aria-labelledby="certifications-heading">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2 id="certifications-heading" data-i18n="cert-title">Certifications</h2>
+        </div>
+        <div class="cert-grid">
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-icon"><img src="assets/img/cka-badge.png" alt="CKA" class="cert-logo" loading="lazy" decoding="async" width="80" height="80"></div>
+                                <h3 data-i18n="c-cka-title">CKA - Certified Kubernetes Administrator</h3>
+                                <p class="cert-issuer" data-i18n="c-cka-issuer">The Linux Foundation</p>
+                                <span class="cert-date" data-i18n="c-cka-date">Avril 2026</span>
+                                <a href="https://www.credly.com/badges/34bdedd9-3fbf-4e43-8ec6-4fb77081adec/public_url" class="cert-verify" data-i18n="c-cka-verify" target="_blank" rel="noopener">Vérifier</a>
+                            </div>
+                            <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+                                <div class="cert-icon"><img src="assets/img/cks-badge.png" alt="CKS" class="cert-logo" loading="lazy" decoding="async" width="80" height="80"></div>
+                                <h3 data-i18n="c-cks-title">CKS - Certified Kubernetes Security Specialist</h3>
+                                <p class="cert-issuer" data-i18n="c-cks-issuer">The Linux Foundation</p>
+                                <span class="cert-date" data-i18n="c-cks-date">Mai 2026</span>
+                                <a href="https://www.credly.com/badges/88605493-7fe2-4f54-b266-973b3bb56b81/public_url" class="cert-verify" data-i18n="c-cks-verify" target="_blank" rel="noopener">Vérifier</a>
+                            </div>
+                            <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="cert-icon"><img src="assets/img/cambridge-logo.png" alt="Cambridge English" class="cert-logo" loading="lazy" decoding="async" width="120" height="120"></div>
+                                <h3 data-i18n="c-linguaskills-title">Linguaskills</h3>
+                                <p class="cert-issuer" data-i18n="c-linguaskills-issuer">Cambridge English</p>
+                                <span class="cert-date">B2+/C1</span>
+                            </div>
+                            <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
+                                <div class="cert-icon"><img src="assets/img/goethe-institut-logo.png" alt="Goethe-Institut" class="cert-logo" loading="lazy" decoding="async" width="120" height="120"></div>
+                                <h3 data-i18n="c-goethe-title">Goethe Pro Test</h3>
+                                <p class="cert-issuer" data-i18n="c-goethe-issuer">Goethe-Institut</p>
+                                <span class="cert-date">A2/B1</span>
+                            </div>
+        </div>
+    </div>
+</section>
+
+<section id="recommendations" class="recommendations" aria-labelledby="recommendations-heading">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2 id="recommendations-heading" data-i18n="recommendations-title">Recommandations</h2>
+                </div>
+                <div class="sk-ww-linkedin-recommendations" data-embed-id="25693338"></div>
+    </div>
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="contact-grid">
+
+                <!-- Left panel: visual / info -->
+                <div class="contact-visual" data-aos="fade-right">
+                    <picture>
+                        <source srcset="./assets/img/contact-img.webp" type="image/webp">
+                        <source srcset="./assets/img/contact-img-mob.webp" type="image/webp">
+                        <img src="./assets/img/contact-img.jpg" alt="" role="presentation" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="contact-visual-overlay">
+                        <div class="contact-info">
+                            <h3 data-i18n="contact-info-title">Me contacter</h3>
+                            <p data-i18n="contact-info-desc">Une question, une opportunité professionnelle, ou simplement envie de discuter tech ? N'hésitez pas !</p>
+                            <div class="contact-info-links">
+                                <a href="mailto:corentin.reault@protonmail.com" class="contact-info-link" aria-label="Email">
+                                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                    <span>corentin.reault@protonmail.com</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/corentin-reault/" class="contact-info-link" aria-label="LinkedIn" target="_blank">
+                                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/corentin-reault" class="contact-info-link" aria-label="GitHub" target="_blank">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right panel: form card -->
+                <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="100">
+                    <div class="form-card">
+                        <div class="form-card-header">
+                            <h2 id="contact-heading" data-i18n="contact-title">Contact</h2>
+                            <p data-i18n="contact-desc">Remplissez le formulaire suivant pour prendre contact avec moi</p>
+                        </div>
+                        <form id="contact-form" novalidate aria-describedby="form-instructions">
+                            <p id="form-instructions" class="sr-only" data-i18n="form-instructions">All fields marked with asterisk are required</p>
+                            <!-- Honeypot temporel (injecté par JS au submit) -->
+                            <input type="hidden" id="form-timestamp" name="timestamp" value="">
+                            <!-- Honeypot bot basique (caché visuellement) -->
+                            <input type="text" id="website" name="website" placeholder="Website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;top:-9999px;left:-9999px;height:0;width:0;opacity:0">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" data-i18n="form-name-label">Nom</label>
+                                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name" aria-required="true" aria-describedby="name-error">
+                                    <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" data-i18n="form-email-label">Email</label>
+                                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email" aria-required="true" aria-describedby="email-error">
+                                    <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-i18n="form-phone-label">Téléphone</label>
+                                <input class="form-control" type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" aria-describedby="phone-error">
+                                <span id="phone-error" class="field-error" role="alert" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="form-message-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your message" maxlength="1000" rows="4" required aria-required="true" aria-describedby="message-error message-count"></textarea>
+                                <span id="message-count" class="char-count" aria-live="polite"><span id="char-count">0</span>/1000</span>
+                                <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group form-submit-group">
+                                <button type="submit">
+                                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                                    <span data-i18n="form-submit">CONTACTEZ-MOI !</span>
+                                    <span class="spinner" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="form-group form-error" id="form-error" role="alert" aria-live="assertive">
+                                <p id="form-error-text"></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popup overlay -->
+            <div class="popup-overlay" id="popup-overlay" aria-hidden="true"></div>
+
+            <!-- Popup -->
+            <div class="popup" id="popup" role="dialog" aria-labelledby="popup-title" aria-modal="true">
+                <img src="./assets/img/check-mark-button-svgrepo-com.svg" alt="Success" width="110" height="110" loading="lazy" decoding="async">
+                <h2 id="popup-title" data-i18n="popup-title">Merci !</h2>
+                <p data-i18n="popup-msg">Vos détails ont bien été transmis. Je reviendrai rapidement vers vous.</p>
+                <button type="button" id="popup-close" data-i18n="popup-close">OK</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p data-i18n="footer">&copy; 2024 Corentin Réault. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Critical JS: Bootstrap bundle (needed for mobile nav toggle) -->
+    <script src="./libs/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Non-critical JS: deferred loading (local only) -->
+    <script src="./libs/typed.js/typed.umd.js" defer></script>
+    <script src="./libs/aos/aos.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/particles.js" defer></script>
+    <script src="./assets/js/popup.js" defer></script>
+    <script src="./assets/js/form.js" defer></script>
+    <script src="./assets/js/particles-init.js" defer></script>
+
+    <!-- External scripts loaded dynamically after page load (non-blocking) -->
+    <script>
+      window.addEventListener('load', () => {
+        // Umami analytics
+        const umami = document.createElement('script');
+        umami.src = 'https://tracker.reault.tech/script.js';
+        umami.setAttribute('data-website-id', 'a7ac9e93-3d45-49d1-931b-60c8184c486e');
+        umami.defer = true;
+        document.body.appendChild(umami);
+
+        // LinkedIn recommendations widget
+        const linkedin = document.createElement('script');
+        linkedin.src = 'https://widgets.sociablekit.com/linkedin-recommendations/widget.js';
+        linkedin.defer = true;
+        document.body.appendChild(linkedin);
+
+        // Initialize SociableKIT widget after it loads
+        linkedin.onload = () => {
+          if (window.SociableKIT && typeof window.SociableKIT.init === 'function') {
+            window.SociableKIT.init();
+          }
+        };
+      });
+    </script>
+</body>
+</html>

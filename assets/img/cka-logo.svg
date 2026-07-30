@@ -1,0 +1,1356 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"480e70c430",applicationID:"67333701",browserID:"135270067"};;/*! For license information please see nr-loader-rum-1.318.0.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let o in s)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):e[o]instanceof Map||e[o]instanceof Set||e[o]instanceof Date||e[o]instanceof RegExp?r[o]=e[o]:"object"==typeof e[o]&&null!==t[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>o});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,s)])},7699(e,t,r){"use strict";var n=r(860);const i={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,1e6,"KC",0,i,"qh",0,"SESSION_ERROR"])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.318.0"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),c=""+o?.location,u=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,s,"gm",0,o,"m",0,c,"mw",0,a,"sb",0,d,"zk",0,()=>{const e=o?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<o.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>a,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),o=r(2646);function a(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,a=i.i.handlers;if(s&&!s.aborted&&s.backlog&&a){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=a[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete a[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),s=r(2646),o=r(5607);const a="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var a=g(n);m(e).forEach(e=>{e.apply(a,r)});var u=v()[o[e]];u&&u.push([f,e,r,a]);return a},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,a,()=>new s.y(a)):new s.y(a)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,a,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=o;var i=s.handlers={};function s(e,t,r,s){o(s||n.d,i,e,t,r)}function o(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var o=t[s]=t[s]||{};(o[r]=o[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,s=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var a=0;a<e;a++)o.push(i(r,s++).toString(16));return o.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>o,Qr:()=>c,sB:()=>a});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(s())return e();const r=(0,i.J)(e),o=setInterval(()=>{s()&&(clearInterval(o),r())},500);(0,n.sp)("load",r,t)}function a(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),o=r(1910);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,o.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,a])},2843(e,t,r){"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),s=r(1863),o=r(944),a=r(3969),c=r(8362),u=r(860);function d(e,t,r,s){const d=s||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(a.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,o.R)(23,e)}})}function l(e,t,r,n,o){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(o||null===r)&&(0,i.p)("api-"+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",s="browser/blobs",o="browser/logs",a={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[a.pageViewEvent]:1,[a.pageViewTiming]:2,[a.metrics]:3,[a.jserrors]:4,[a.softNav]:5,[a.ajax]:6,[a.sessionTrace]:7,[a.sessionReplay]:8,[a.logging]:9,[a.genericEvents]:10},u={[a.pageViewEvent]:"rum",[a.pageViewTiming]:n,[a.ajax]:n,[a.softNav]:n,[a.metrics]:i,[a.jserrors]:i,[a.sessionTrace]:s,[a.sessionReplay]:s,[a.logging]:o,[a.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,a,"P3",0,c,"XX",0,i,"Yy",0,o,"df",0,s])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const s=t[n]={exports:{}};return e[n](s,s.exports,r),s.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],s=t[n++];r.o(e,i)?0===s&&n++:0===s?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:s})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.318.0.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.318.0.PROD:";r.l=(n,i,s,o)=>{if(e[n])return void e[n].push(i);let a,c;if(void 0!==s){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+s){a=r;break}}}if(!a){c=!0;var d={296:"sha512-l/aSvO0UYzQns1WyMlY2r8pdkmVR0o/Rze4wpZR98a+X8aP+uRfcG9NMVI6fcdpy4uRK5azdx+CgSn8/UKULRw=="};a=document.createElement("script"),a.charset="utf-8",r.nc&&a.setAttribute("nonce",r.nc),a.setAttribute("data-webpack",t+s),a.src=n,0!==a.src.indexOf(window.location.origin+"/")&&(a.crossOrigin="anonymous"),d[o]&&(a.integrity=d[o])}e[n]=[i];const l=(t,r)=>{a.onerror=a.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],a.parentNode?.removeChild(a),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=l.bind(null,a.onerror),a.onload=l.bind(null,a.onload),c&&document.head.appendChild(a)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const s=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=s);const o=r.p+r.u(t),a=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;a.message="Loading chunk "+t+" failed: ("+e+": "+r+")",a.name="ChunkLoadError",a.type=e,a.request=r,i[1](a)}};r.l(o,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,s,o]=n;var a,c,u=0;if(i.some(t=>0!==e[t])){for(a in s)r.o(s,a)&&(r.m[a]=s[a]);if(o)o(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.318.0.PROD"]=self["webpackChunk:NRBA-1.318.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),s=r(1741);var o=r(2555),a=r(981);t.K7.genericEvents,a.R.PA,a.R.UA,a.R.BP;const c="experimental.resources",u="register",d=(t.K7.ajax,"none"),l=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var f=r(2614),g=r(944),p=r(8122);const m="[data-nr-mask]",h=e=>(0,p.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:d},api:{register:{get enabled(){return e.feature_flags.includes(u)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:f.wk,inactiveMs:f.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){l(t)?e.mask_selector="".concat(t,",").concat(m):""===t||null===t?e.mask_selector=m:(0,g.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){l(t)?e.block_selector+=",".concat(t):""!==t&&(0,g.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,g.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var v=r(6154),b=r(9324);let y=0;const _={buildEnv:"PROD",distMethod:"CDN",version:b.xv,originTime:v.WN},w={consented:!1},R={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||w.consented},set consented(e){w.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++y}};var x=r(7836),A=r(3241);const k={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};function S(e,t={},n,a){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var g;e.init=h(c||{}),e.loader_config=(g=d||{},(0,p.a)(g,k)),u.jsAttributes??={},v.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,o.D)(u);const m=e.init;e.runtime??=(e=>{const t=(0,p.a)(e,R),r=Object.keys(_).reduce((e,t)=>(e[t]={value:_[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),m.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(m.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(s.W.prototype).forEach(r=>{const n=s.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=x.ee.get(e.agentIdentifier),e.exposed=f,(0,A.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.runtime.configured=!0)}var T=r(9908),E=r(1863),j=r(4261),P=r(1738);var N=r(1687),O=r(4234),M=r(5289),I=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,I.V)(e)&&!0===e?.session_trace.enabled}var D=r(6389),W=r(7699);const B=new WeakSet;class K extends O.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,D.J)(()=>{(0,N.Ak)(e,this.featureName),t()}))}):(0,N.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,o.f)(e.info))return(0,g.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);let i;try{if((0,I.V)(e.init)){const{setupAgentSession:t}=await r.e(296).then(r.bind(r,8391));i=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,T.p)(W.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#r(this.featureName,i,e.init))return(0,N.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,N.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};v.RI?(0,M.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!B.has(e)&&(B.add(e),!(0,o.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}S(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var C=r(6630);class U extends K{static featureName=C.T;constructor(e){var t;super(e,C.T),this.setupInspectionEvents(),t=e,(0,P.Y)(j.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,T.p)("api-"+j.Fw,[(0,E.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>r.e(296).then(r.bind(r,1324)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,A.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,M.sB)(t=>{e(t,"DOMContentLoaded")}),(0,M.GG)(t=>{e(t,"load")}),(0,M.Qr)(t=>{e(t,"navigate")}),this.ee.on(f.tS.UPDATE,(e,t)=>{(0,A.W)({type:"lifecycle",name:"session",data:t})})}}class L extends e.d{constructor(e){var t;(super(),v.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(U),S(this,e,e.loaderType||"agent"),t=this,(0,P.Y)(j.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,P.U)(t,e,r,j.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,P.Y)(j.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,T.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,P.U)(e,"enduser.id",t,j.Dl,!0)},e)}(this),function(e){(0,P.Y)(j.nb,function(t){if("string"==typeof t||null===t)return(0,P.U)(e,"application.version",t,j.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,P.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,P.Y)(j.Pv,function(t=!0){if("boolean"==typeof t){if((0,T.p)("api-"+j.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures];r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var G=r(2843),F=r(782);class H extends K{static featureName=F.T;constructor(e){super(e,F.T),v.RI&&((0,G.u)(()=>(0,T.p)("docHidden",[(0,E.t)()],void 0,F.T,this.ee),!0),(0,G.G)(()=>(0,T.p)("winPagehide",[(0,E.t)()],void 0,F.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,2117))))}}var z=r(3969);class Y extends K{static featureName=z.TZ;constructor(e){super(e,z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new L({features:[U,H,Y],loaderType:"lite"})})()})();</script>
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><link rel="shortcut icon" href="" /><script>
+window.dataLayer = window.dataLayer ||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  'ad_storage':'denied',
+  'analytics_storage':'denied',
+  'ad_user_data':'denied',
+  'ad_personalization':'denied',
+  'personalization_storage':'denied',
+  'functionality_storage':'granted',
+  'security_storage':'granted',
+  'wait_for_update': 500
+});
+gtag('set', 'ads_data_redaction', true);
+gtag('set', 'url_passthrough',true);
+</script><script src="https://cmp.osano.com/16A0DbT9yDNIaQkvZ/af2b9f1f-3ac7-4a18-a99a-e487d04f08e6/osano.js"></script><meta name='robots' content='noindex, follow' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO Premium plugin v25.8 (Yoast SEO v27.7) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Page not found - Linux Foundation - Education</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - Linux Foundation - Education" />
+	<meta property="og:site_name" content="Linux Foundation - Education" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/training.linuxfoundation.org\/#website","url":"https:\/\/training.linuxfoundation.org\/","name":"Linux Foundation - Education","description":"","publisher":{"@id":"https:\/\/training.linuxfoundation.org\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/training.linuxfoundation.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/training.linuxfoundation.org\/#organization","name":"The Linux Foundation","url":"https:\/\/training.linuxfoundation.org\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/training.linuxfoundation.org\/#\/schema\/logo\/image\/","url":"https:\/\/training.linuxfoundation.org\/wp-content\/uploads\/2018\/07\/logo.png","contentUrl":"https:\/\/training.linuxfoundation.org\/wp-content\/uploads\/2018\/07\/logo.png","width":800,"height":264,"caption":"The Linux Foundation"},"image":{"@id":"https:\/\/training.linuxfoundation.org\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.linkedin.com\/showcase\/the-linux-foundation-training-&amp;amp;-certification\/"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//training.linuxfoundation.org' />
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//cdn.auth0.com' />
+<link rel='dns-prefetch' href='//cdn.dev.platform.linuxfoundation.org' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Linux Foundation - Education &raquo; Feed" href="https://training.linuxfoundation.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Linux Foundation - Education &raquo; Comments Feed" href="https://training.linuxfoundation.org/comments/feed/" />
+
+<!-- LFX Segments Analytics -->
+<script src="https://lfx-segment.platform.linuxfoundation.org/latest/lfx-segment-analytics.min.js"></script>
+<script>
+  // Initialize with default configuration (no custom write key needed)
+  LfxAnalytics.LfxSegmentsAnalytics.getInstance().init();
+</script>
+
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='reusablec-block-css-css' href='https://training.linuxfoundation.org/wp-content/plugins/reusable-content-blocks/includes/css/reusablec-block.css?ver=7.0.2' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 1300px;--wp--style--global--wide-size: 1300px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='widgetopts-styles-css' href='https://training.linuxfoundation.org/wp-content/plugins/widget-options/assets/css/widget-options.css?ver=4.2.5' media='all' />
+<link rel='stylesheet' id='trp-language-switcher-style-css' href='https://training.linuxfoundation.org/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css?ver=3.2.1' media='all' />
+<link rel='stylesheet' id='articulate-custom-css-css' href='https://training.linuxfoundation.org/wp-content/plugins/insert-or-embed-articulate-content-into-wordpress-premium/css/frontend.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='search-filter-plugin-styles-css' href='https://training.linuxfoundation.org/wp-content/plugins/search-filter-pro/public/assets/css/search-filter.min.css?ver=2.5.21' media='all' />
+<link rel='stylesheet' id='lf-countdown-frontend-css' href='https://training.linuxfoundation.org/wp-content/plugins/lf-countdown/assets/css/frontend.css?ver=0.1.0' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/font-awesome-legacy.min.css?ver=4.7.1' media='all' />
+<link rel='stylesheet' id='salient-grid-system-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/grid-system.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='main-styles-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/style.css?ver=18.2.1' media='all' />
+<style id="main-styles-inline-css">
+
+		@font-face{
+		     font-family:'Open Sans';
+		     src:url('https://training.linuxfoundation.org/wp-content/themes/salient/css/fonts/OpenSans-Light.woff') format('woff');
+		     font-weight:300;
+		     font-style:normal; 
+		}
+		 @font-face{
+		     font-family:'Open Sans';
+		     src:url('https://training.linuxfoundation.org/wp-content/themes/salient/css/fonts/OpenSans-Regular.woff') format('woff');
+		     font-weight:400;
+		     font-style:normal; 
+		}
+		 @font-face{
+		     font-family:'Open Sans';
+		     src:url('https://training.linuxfoundation.org/wp-content/themes/salient/css/fonts/OpenSans-SemiBold.woff') format('woff');
+		     font-weight:600;
+		     font-style:normal; 
+		}
+		 @font-face{
+		     font-family:'Open Sans';
+		     src:url('https://training.linuxfoundation.org/wp-content/themes/salient/css/fonts/OpenSans-Bold.woff') format('woff');
+		     font-weight:700;
+		     font-style:normal; 
+		}
+
+		#error-404{
+		  text-align:center;
+		  padding: 10% 0;
+		  position: relative;
+		  z-index: 10;
+		}
+		body.error {
+		  padding: 0;
+		}
+		body #error-404[data-cc="true"] h1,
+		body #error-404[data-cc="true"] h2,
+		body #error-404[data-cc="true"] p {
+		  color: inherit;
+		}
+		body.error404 .error-404-bg-img,
+		body.error404 .error-404-bg-img-overlay {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-size: cover;
+		  background-position: 50%;
+		  z-index: 1;
+		}
+		body.error404 .error-404-bg-img-overlay {
+		  opacity: 0.8;
+		}
+		body #error-404 h1,
+		body #error-404 h2 {
+		  font-family: "Open Sans";
+		  font-weight:700
+		}
+		body #ajax-content-wrap #error-404 h1 {
+		  font-size:250px;
+		  line-height:250px;
+		}
+		body #ajax-content-wrap #error-404 h2 {
+		  font-size:54px;
+		}
+		body #error-404 .nectar-button {
+		  margin-top: 50px;
+		}
+
+		body.error404 .main-content > .row > .col.span_12 {
+			padding-bottom: 0;
+		}
+
+		@media only screen and (max-width : 690px) {
+
+			body .row #error-404 h1,
+			body #ajax-content-wrap #error-404 h1 {
+				font-size: 150px;
+				line-height: 150px;
+			}
+
+			body #ajax-content-wrap #error-404 h2 {
+				font-size: 32px;
+			}
+
+			body .row #error-404 {
+				margin-bottom: 0;
+			}
+		}
+		
+/*# sourceURL=main-styles-inline-css */
+</style>
+<link rel='stylesheet' id='nectar-element-scrolling-text-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/elements/element-scrolling-text.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='nectar-brands-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/nectar-brands.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='responsive-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/responsive.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='nectar-flickity-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/plugins/flickity.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='skin-ascend-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/ascend.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='salient-wp-menu-dynamic-css' href='https://training.linuxfoundation.org/wp-content/uploads/salient/menu-dynamic.css?ver=21900' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/plugins/js_composer.css?ver=18.2.1' media='all' />
+<link rel='stylesheet' id='gforms_reset_css-css' href='https://training.linuxfoundation.org/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=2.10.3' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css' href='https://training.linuxfoundation.org/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=2.10.3' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css' href='https://training.linuxfoundation.org/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=2.10.3' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css' href='https://training.linuxfoundation.org/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=2.10.3' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='//training.linuxfoundation.org/wp-content/uploads/pum/pum-site-styles.css?generated=1757091078&#038;ver=1.22.0' media='all' />
+<link rel='stylesheet' id='dynamic-css-css' href='https://training.linuxfoundation.org/wp-content/uploads/salient/salient-dynamic-styles.css?ver=12838' media='all' />
+<style id="dynamic-css-inline-css">
+@media only screen and (min-width:1000px){body #ajax-content-wrap.no-scroll{min-height:calc(100vh - 36px);height:calc(100vh - 36px)!important;}}@media only screen and (min-width:1000px){#page-header-wrap.fullscreen-header,#page-header-wrap.fullscreen-header #page-header-bg,html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header,.nectar_fullscreen_zoom_recent_projects,#nectar_fullscreen_rows:not(.afterLoaded) > div{height:calc(100vh - 35px);}.wpb_row.vc_row-o-full-height.top-level,.wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 35px);}html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header{top:36px;}.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 34px)!important;}.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 34px - 32px)!important;}}.admin-bar[class*="page-template-template-no-header"] .wpb_row.vc_row-o-full-height.top-level,.admin-bar[class*="page-template-template-no-header"] .wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 32px);}body[class*="page-template-template-no-header"] .wpb_row.vc_row-o-full-height.top-level,body[class*="page-template-template-no-header"] .wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:100vh;}@media only screen and (max-width:999px){.using-mobile-browser #nectar_fullscreen_rows:not(.afterLoaded):not([data-mobile-disable="on"]) > div{height:calc(100vh - 92px);}.using-mobile-browser .wpb_row.vc_row-o-full-height.top-level,.using-mobile-browser .wpb_row.vc_row-o-full-height.top-level > .col.span_12,[data-permanent-transparent="1"].using-mobile-browser .wpb_row.vc_row-o-full-height.top-level,[data-permanent-transparent="1"].using-mobile-browser .wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 92px);}html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header,.nectar_fullscreen_zoom_recent_projects,.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container,#nectar_fullscreen_rows:not(.afterLoaded):not([data-mobile-disable="on"]) > div{height:calc(100vh - 39px);}.wpb_row.vc_row-o-full-height.top-level,.wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 39px);}body[data-transparent-header="false"] #ajax-content-wrap.no-scroll{min-height:calc(100vh - 39px);height:calc(100vh - 39px);}}body .container-wrap .wpb_row[data-column-margin="none"]:not(.full-width-section):not(.full-width-content),html body .wpb_row[data-column-margin="none"]:not(.full-width-section):not(.full-width-content){margin-bottom:0;}body .container-wrap .vc_row-fluid[data-column-margin="none"] > .span_12,html body .vc_row-fluid[data-column-margin="none"] > .span_12,body .container-wrap .vc_row-fluid[data-column-margin="none"] .full-page-inner > .container > .span_12,body .container-wrap .vc_row-fluid[data-column-margin="none"] .full-page-inner > .span_12{margin-left:0;margin-right:0;}body .container-wrap .vc_row-fluid[data-column-margin="none"] .wpb_column:not(.child_column),body .container-wrap .inner_row[data-column-margin="none"] .child_column,html body .vc_row-fluid[data-column-margin="none"] .wpb_column:not(.child_column),html body .inner_row[data-column-margin="none"] .child_column{padding-left:0;padding-right:0;}.col.padding-1-percent > .vc_column-inner,.col.padding-1-percent > .n-sticky > .vc_column-inner{padding:calc(600px * 0.01);}@media only screen and (max-width:690px){.col.padding-1-percent > .vc_column-inner,.col.padding-1-percent > .n-sticky > .vc_column-inner{padding:calc(100vw * 0.01);}}@media only screen and (min-width:1000px){.col.padding-1-percent > .vc_column-inner,.col.padding-1-percent > .n-sticky > .vc_column-inner{padding:calc((100vw - 180px) * 0.01);}.column_container:not(.vc_col-sm-12) .col.padding-1-percent > .vc_column-inner{padding:calc((100vw - 180px) * 0.005);}}@media only screen and (min-width:1425px){.col.padding-1-percent > .vc_column-inner{padding:calc(1245px * 0.01);}.column_container:not(.vc_col-sm-12) .col.padding-1-percent > .vc_column-inner{padding:calc(1245px * 0.005);}}.full-width-content .col.padding-1-percent > .vc_column-inner{padding:calc(100vw * 0.01);}@media only screen and (max-width:999px){.full-width-content .col.padding-1-percent > .vc_column-inner{padding:calc(100vw * 0.01);}}@media only screen and (min-width:1000px){.full-width-content .column_container:not(.vc_col-sm-12) .col.padding-1-percent > .vc_column-inner{padding:calc(100vw * 0.005);}}.screen-reader-text,.nectar-skip-to-content:not(:focus){border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;}.row .col img:not([srcset]){width:auto;}.row .col img.img-with-animation.nectar-lazy:not([srcset]){width:100%;}
+/* HUBSPOT FORMS */
+.hubspot-form {
+	background: #ffffff;
+	padding: 42px;
+	border-radius: 6px;
+	background: #F2F2F2;
+	margin-left: auto !important;
+}
+
+.hubspot-form input[type=text] {
+	color: black !important;
+}
+
+
+.hubspot-form .input input {
+	border: 1px solid #ccc !important;
+	font-size: 16px !important;
+	padding: 16px !important;
+	display: block;
+}
+
+.hubspot-form .wpb_text_column.wpb_content_element {
+	color: black;
+	font-size: 15px;
+	line-height: 22px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.hubspot-form-header .wpb_text_column.wpb_content_element {
+	background: #F2F2F2;
+	padding: 42px 42px 0 42px;
+}
+
+.hubspot-form-header .wpb_text_column.wpb_content_element p {
+	color: black;
+	font-size: 15px;
+	line-height: 22px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.hubspot-form input.hs-button.primary.large {
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 6px;
+	background: #0099CC;
+	width: 100% !important;
+	height: 60px !important;
+	line-height: normal !important;
+	margin-top: 30px;
+}
+
+.hs-fieldtype-select select,
+.hs_form_country.hs-form_country.hs-fieldtype-select.field.hs-form-field select,
+.hs_training_size.hs-training_size.hs-fieldtype-select.field.hs-form-field select,
+.hs_training_interest.hs-training_interest.hs-fieldtype-select.field.hs-form-field select,
+.hs_training___corporate_solutions___industry.hs-training___corporate_solutions___industry.hs-fieldtype-select.field.hs-form-field select,
+.hs_academic_or_corporate_organization_.hs-academic_or_corporate_organization_.hs-fieldtype-select.field.hs-form-field select,
+.hs_do_they_have_an_internal_lms_that_is_scorm_connect_compliant_.hs-do_they_have_an_internal_lms_that_is_scorm_connect_compliant_.hs-fieldtype-select.field.hs-form-field select
+{
+  background-color: transparent;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  font-size: 16px;
+  -o-box-shadow: none;
+  padding: 16px;
+}
+
+/* END OF HUBSPOT FORMS */
+
+/* OLDER STYLES FROM UNKNOWN AUTHOR */
+
+.nectar-love {
+	display: none !important;
+}
+
+.meta-comment-count {
+	display: none !important;
+}
+
+.home .blog-recent .col .post-header h3,
+.blog-recent .col .post-header h3 {
+	font-size: 24px !important;
+}
+
+#footer-outer #footer-widgets .col ul li a,
+.widget_text {
+	font-size: 14px !important;
+}
+
+#footer-outer #footer-widgets {
+	padding: 0px 0px !important;
+	color: #969696 !important;
+}
+
+.trp-language-switcher-container {
+	padding-top: 17px;
+}
+
+article.post.link .post-content .link-inner,
+article.post.link .post-content a:hover .link-inner {
+	background-color: #fff !important;
+}
+
+article.post.link .post-content h2,
+article.post.link .post-content .link-inner {
+	color: #000;
+}
+
+#ajax-content-wrap .team-member img {
+	height: 150px;
+}
+
+.nectar-icon-list-item {
+	margin-bottom: 10px !important;
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 1px) {
+
+	html body header#top,
+	html body #header-outer {
+		height: auto !important;
+	}
+
+	#logo {
+		padding-top: 6px;
+	}
+}
+
+.course-catalog-header {
+	color: #ffffff;
+}
+
+.ascend .container-wrap .span_12.light .sf-field-search input[type="text"] {
+	color: #444;
+}
+
+/* Style correction debug for Search Filter on Course catalog until API is updated */
+#search-filter-form-509>ul>li.sf-field-category>ul>li.sf-level-0.sf-item-1,
+#search-filter-form-6884>ul>li.sf-field-category>ul>li.sf-level-0.sf-item-1 {
+	display: none;
+}
+
+/* fix header menu sub-menu icon */
+.menu-left .fa.fa-angle-down,
+.menu-left .fa.fa-angle-right,
+.sf-menu.sf-js-enabled.sf-arrows .fa.fa-angle-down {
+	font-family: FontAwesome !important;
+	font-weight: 800;
+}
+
+/* Product page styling */
+.single-product #lf-pdp-header .lf-no-bg > .row-bg-wrap {
+  background-color: transparent;
+  background-image: none !important;
+}
+.single-product .lf-pdp-content-body ul {
+    text-align: left;
+}
+
+a[href="https://training.linuxfoundation.org/certification/jsnad/"].lf-owl-card .lf-owl-card-price,
+a[href="https://training.linuxfoundation.org/certification/jsnad/"].lf_pdp_fundamentals-related_courses-content-card .lf_pdp_fundamentals-related_courses-content-card-end-price,
+a[href="https://training.linuxfoundation.org/certification/jsnsd/"].lf-owl-card .lf-owl-card-price,
+a[href="https://training.linuxfoundation.org/certification/jsnsd/"].lf_pdp_fundamentals-related_courses-content-card .lf_pdp_fundamentals-related_courses-content-card-end-price,
+a[href="https://training.linuxfoundation.org/certification/openjs-node-js-jsnad-cn/"].lf-owl-card .lf-owl-card-price,
+a[href="https://training.linuxfoundation.org/certification/openjs-node-js-jsnad-cn/"].lf_pdp_fundamentals-related_courses-content-card .lf_pdp_fundamentals-related_courses-content-card-end-price,
+a[href="https://training.linuxfoundation.org/certification/certification-openjs-node-js-jsnsd-cn/"].lf-owl-card .lf-owl-card-price,
+a[href="https://training.linuxfoundation.org/certification/certification-openjs-node-js-jsnsd-cn/"].lf_pdp_fundamentals-related_courses-content-card .lf_pdp_fundamentals-related_courses-content-card-end-price
+{
+    display:none;
+}
+
+/* PDP 3 purchase options styling */
+.lf_pdp_fundamentals-buy-body-card[data-type="background"] {
+  padding: 13px 16px 16px 16px;
+}
+
+.lf_pdp_fundamentals-buy-subscription .lf_pdp_fundamentals-buy-body-card[data-type="background"] .lf_pdp_fundamentals-buy-body-card-info-button {
+  background: rgba(249, 180, 24, 1);
+  padding: 0 5px;
+}
+
+.lf_pdp_fundamentals-buy-body-card[data-type="background"] a.lf_pdp_fundamentals-buy-body-card-info-quote-white, .lf_pdp_fundamentals-buy-body-card[data-type="background"] .lf_pdp_fundamentals-buy-body-card-info-quote-white {
+  color: inherit;
+}
+
+.lf_pdp_fundamentals-buy-body-card[data-type="background"] a, .lf_pdp_fundamentals-buy-body-card[data-type="background"] a:hover {
+  color: inherit;
+}
+
+.lf_pdp_fundamentals-buy-body-card-info-info {
+  margin-right: 7px;
+}
+
+/* Check mark fix (enfroce white) */
+@media only screen and (min-width: 999px) {
+  p span img[alt=""] {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(134deg) brightness(104%) contrast(101%);
+  }
+}
+@media only screen and (min-width: 1000px) {
+	.row .col .lf-pdp-header-text img.emoji[src$="/2714.svg"] {
+		filter: invert(100%) sepia(5%) saturate(20%) hue-rotate(138deg) brightness(136%) contrast(105%);
+	}
+}
+
+/* Hide Gifting Link */
+#lf-pdp-content .lf-pdp-content-sidebar .lf_pdp_fundamentals-gift_course.lf-pdp-component-container { display: none; }
+/*# sourceURL=dynamic-css-inline-css */
+</style>
+<link rel='stylesheet' id='redux-google-fonts-salient_redux-css' href='https://fonts.googleapis.com/css?family=Heebo:400%7COpen+Sans:400,300,700%7CRoboto:300&#038;ver=7.0.2' media='all' />
+<link rel='stylesheet' id='iconsmind-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/iconsmind.css?ver=12.5' media='all' />
+<link rel='stylesheet' id='lf-style-css' href='https://training.linuxfoundation.org/wp-content/themes/lf/style.css?ver=1.8.10' media='all' />
+<link rel='stylesheet' id='featherlight-style-css' href='https://training.linuxfoundation.org/wp-content/themes/lf/css/featherlight.css?ver=1.8.10' media='all' />
+<link rel='stylesheet' id='updates-style-css' href='https://training.linuxfoundation.org/wp-content/themes/lf/css/updates.css?ver=1.8.10' media='all' />
+<link rel='stylesheet' id='lf-email-drawer-css' href='https://training.linuxfoundation.org/wp-content/themes/lf/css/lf-newsletter-drawer.css?ver=1.8.10' media='all' />
+<script id="jquery-core-js" src="https://training.linuxfoundation.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://training.linuxfoundation.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="articulate-custom-js-js" src="https://training.linuxfoundation.org/wp-content/plugins/insert-or-embed-articulate-content-into-wordpress-premium/js/frontend.js?ver=7.0.2"></script>
+<script id="search-filter-plugin-build-js-extra">
+var SF_LDATA = {"ajax_url":"https://training.linuxfoundation.org/wp-admin/admin-ajax.php","home_url":"https://training.linuxfoundation.org/","extensions":[]};
+//# sourceURL=search-filter-plugin-build-js-extra
+</script>
+<script id="search-filter-plugin-build-js" src="https://training.linuxfoundation.org/wp-content/plugins/search-filter-pro/public/assets/js/search-filter-build.min.js?ver=2.5.21"></script>
+<script id="search-filter-plugin-chosen-js" src="https://training.linuxfoundation.org/wp-content/plugins/search-filter-pro/public/assets/js/chosen.jquery.min.js?ver=2.5.21"></script>
+<script id="gform_json-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.10.3"></script>
+<script id="gform_gravityforms-js-extra">
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"9a6a95d80286ccc4480ac89275ba74f2","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"9a6a95d80286ccc4480ac89275ba74f2","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = {"74":"1"};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script id="gform_gravityforms-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.10.3"></script>
+<script id="gform_gravityforms_utils-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=3f278756f0a3032bed328ff6a9f6c01d"></script>
+<script id="owl-language-dropdown-js" src="https://training.linuxfoundation.org/wp-content/themes/lf/js/language_dropdown.js?ver=1.8.10"></script>
+<script></script><link rel="https://api.w.org/" href="https://training.linuxfoundation.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://training.linuxfoundation.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.2" />
+<!-- BEGIN CJ TRACKING CODE -->
+<script type='text/javascript'>
+if (!window.cj) window.cj = {};
+cj.sitePage = {
+  enterpriseId: 1565057,
+  pageType: 'productDetail', // homepage , productDetail , category ?
+  referringChannel: 'Affiliate', // Affiliate , Direct_Navigation , Search ?
+};
+</script>
+<script type='text/javascript'>
+(function(a,b,c,d){
+a='https://www.mczbf.com/tags/450522005731/tag.js';
+b=document;c='script';d=b.createElement(c);d.src=a;
+d.type='text/java'+c;d.async=true;
+d.id='cjapitag';
+a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a)
+})();
+</script>
+<!-- END CJ TRACKING CODE -->
+			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v11.3.45-->
+			<script class="hsq-set-content-id" data-content-id="standard-page">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "standard-page"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+			<link rel="alternate" hreflang="en-US" href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg"/>
+<link rel="alternate" hreflang="ja" href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg"/>
+<link rel="alternate" hreflang="en" href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg"/>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pagePostType":"404-error"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NH48PXP');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><script type="text/javascript"> var root = document.getElementsByTagName( "html" )[0]; root.setAttribute( "class", "js" ); </script><!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8112310.js"></script>
+<!-- End of HubSpot Embed Code -->
+<!-- Start of Optimize Embed Code -->
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-KXSVCG6"></script>
+<!--  OPT-WT4JZ7L End of Optimize Embed Code --><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<link rel="icon" href="https://training.linuxfoundation.org/wp-content/uploads/2018/07/cropped-unnamed-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://training.linuxfoundation.org/wp-content/uploads/2018/07/cropped-unnamed-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://training.linuxfoundation.org/wp-content/uploads/2018/07/cropped-unnamed-180x180.png" />
+<meta name="msapplication-TileImage" content="https://training.linuxfoundation.org/wp-content/uploads/2018/07/cropped-unnamed-270x270.png" />
+<style id="wp-custom-css">
+
+.ascend #header-outer .sf-menu ul li a {
+font-size:1em !important;
+	padding:5%;
+}
+
+.sf-menu ul {
+width:300% !important;
+}
+
+.menu-item menu-item-type-post_type menu-item-object-page menu-item-3386 #menu-item-3386 {
+float:left;
+max-width:200px !important;
+}
+
+li #menu-item-3386 {
+float:left !important;
+max-width:200px !important;
+}
+</style>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><link rel='stylesheet' id='language_confirmation_modal-css' href='https://training.linuxfoundation.org/wp-content/themes/lf/css/language_confirmation_modal.css?ver=1.8.10' media='all' />
+<link data-pagespeed-no-defer data-nowprocket data-wpacu-skip data-no-optimize data-noptimize rel='stylesheet' id='main-styles-non-critical-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/style-non-critical.css?ver=18.2.1' media='all' />
+<link data-pagespeed-no-defer data-nowprocket data-wpacu-skip data-no-optimize data-noptimize rel='stylesheet' id='magnific-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/plugins/magnific.css?ver=8.6.0' media='all' />
+<link data-pagespeed-no-defer data-nowprocket data-wpacu-skip data-no-optimize data-noptimize rel='stylesheet' id='nectar-ocm-core-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/off-canvas/core.css?ver=18.2.1' media='all' />
+<link data-pagespeed-no-defer data-nowprocket data-wpacu-skip data-no-optimize data-noptimize rel='stylesheet' id='nectar-ocm-simple-css' href='https://training.linuxfoundation.org/wp-content/themes/salient/css/build/off-canvas/simple-dropdown.css?ver=18.2.1' media='all' />
+
+</head><body class="error404 wp-theme-salient wp-child-theme-lf translatepress-en_US nectar-auto-lightbox ascend wpb-js-composer js-comp-ver-8.7.3 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="default" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="easeOutCubic" data-cad="650" data-megamenu-width="contained" data-aie="none" data-ls="magnific" data-apte="standard" data-hhun="0" data-fancy-form-rcs="default" data-form-style="default" data-form-submit="regular" data-is="minimal" data-button-style="default" data-user-account-button="false" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="false" data-animated-anchors="true" data-ajax-transitions="false" data-full-width-header="true" data-slide-out-widget-area="true" data-slide-out-widget-area-style="simple" data-user-set-ocm="1" data-loading-animation="none" data-bg-header="false" data-responsive="1" data-ext-responsive="true" data-ext-padding="90" data-header-resize="0" data-header-color="custom" data-transparent-header="false" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="0" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false" >
+	
+	<script type="text/javascript">
+	 (function(window, document) {
+
+		document.documentElement.classList.remove("no-js");
+
+		if(navigator.userAgent.match(/(Android|iPod|iPhone|iPad|BlackBerry|IEMobile|Opera Mini)/)) {
+			document.body.className += " using-mobile-browser mobile ";
+		}
+		if(navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) {
+			document.body.className += " using-ios-device ";
+		}
+
+		if( !("ontouchstart" in window) ) {
+
+			var body = document.querySelector("body");
+			var winW = window.innerWidth;
+			var bodyW = body.clientWidth;
+
+			if (winW > bodyW + 4) {
+
+				var vwTestEl = document.createElement("div");
+				vwTestEl.style.position = "absolute";
+				vwTestEl.style.top = "-9999px";
+				vwTestEl.style.width = "100vw";
+				body.appendChild(vwTestEl);
+				var vwWidth = vwTestEl.offsetWidth;
+				body.removeChild(vwTestEl);
+
+				if (vwWidth > bodyW + 4) {
+					body.setAttribute("style", "--scroll-bar-w: " + (winW - bodyW - 4) + "px");
+				} else {
+					body.setAttribute("style", "--scroll-bar-w: 0px");
+				}
+
+			} else {
+				body.setAttribute("style", "--scroll-bar-w: 0px");
+			}
+		}
+
+	 })(window, document);
+   </script><nav aria-label="Skip links" class="nectar-skip-to-content-wrap" data-nosnippet><a href="#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a></nav>	
+	<div id="header-space"  data-header-mobile-fixed='false'></div> 
+	
+		<div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="false" data-ptnm="1" data-lhe="default" data-user-set-bg="#ffffff" data-format="default" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="0" data-header-resize="0" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="16" data-m-logo-height="16" data-padding="10" data-full-width="true" data-condense="false" >
+		
+<header id="top" class="lf-header">
+	<div class="container">
+
+		<div class="row row-meta">
+			<div class="col span_3">
+				<a id="logo" href="https://www.linuxfoundation.org/" target="_blank" rel="noopener noreferrer" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false" >
+					<img class="stnd skip-lazy default-logo" width="1000" height="59.5" alt="Linux Foundation - Education" src="https://training.linuxfoundation.org/wp-content/uploads/2022/09/lf-horizontal-white.svg" srcset="https://training.linuxfoundation.org/wp-content/uploads/2022/09/lf-horizontal-white.svg 1x, https://training.linuxfoundation.org/wp-content/uploads/2022/09/lf-horizontal-white.svg 2x" />                </a>
+			</div>
+		</div>
+
+		<div class="row row-main">
+			<div class="col span_3">
+
+				<div class="lf-top" data-separator="true">
+                    <a class="site-name" href="https://training.linuxfoundation.org">
+						<img class="stnd skip-lazy lft-logo" alt="Linux Foundation - Training & Certification" src="/wp-content/themes/lf/images/lfeducation_white-abbrev.svg" srcset="/wp-content/themes/lf/images/lfeducation_white-abbrev.svg 1x, /wp-content/themes/lf/images/lfeducation_white-abbrev@2x.svg 2x" width="191" height="48">
+						<span class="lft-logo-copy">Training & Certification</span>
+					</a>
+                </div>
+
+                <nav class="menu-left">
+                    <ul class="sf-menu">
+						<li id="menu-item-13811" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children sf-with-ul catalog menu-item-13811"><a href="/full-catalog/" aria-haspopup="true" aria-expanded="false">Catalog<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-13822" class="menu-item menu-item-type-custom menu-item-object-custom see-full-catalog menu-item-13822"><a href="/full-catalog/">See Full Catalog</a></li>
+	<li id="menu-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page 16936 menu-item-16936"><a href="https://training.linuxfoundation.org/certification-catalog/">Certifications</a></li>
+	<li id="menu-item-38184" class="menu-item menu-item-type-post_type menu-item-object-page instructor-led-courses menu-item-38184"><a href="https://training.linuxfoundation.org/instructor-led-training-courses/">Instructor-led Courses</a></li>
+	<li id="menu-item-24048" class="menu-item menu-item-type-post_type menu-item-object-page 24048 menu-item-24048"><a href="https://training.linuxfoundation.org/skillcred/">SkillCreds</a></li>
+	<li id="menu-item-26843" class="menu-item menu-item-type-post_type menu-item-object-page 26843 menu-item-26843"><a href="https://training.linuxfoundation.org/subscriptions/">Subscriptions</a></li>
+	<li id="menu-item-17664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children 17664 menu-item-17664"><a href="https://training.linuxfoundation.org/technology-catalog/" aria-haspopup="true" aria-expanded="false">Search By Technology<span class="sf-sub-indicator"><i class="fa fa-angle-right icon-in-menu"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-16488" class="menu-item menu-item-type-post_type menu-item-object-page 16488 menu-item-16488"><a href="https://training.linuxfoundation.org/cloud-containers/">Cloud &#038; Containers</a></li>
+		<li id="menu-item-16475" class="menu-item menu-item-type-post_type menu-item-object-page 16475 menu-item-16475"><a href="https://training.linuxfoundation.org/system-administration/">System Administration</a></li>
+		<li id="menu-item-20396" class="menu-item menu-item-type-post_type menu-item-object-page 20396 menu-item-20396"><a href="https://training.linuxfoundation.org/cybersecurity/">Cybersecurity</a></li>
+		<li id="menu-item-39090" class="menu-item menu-item-type-post_type menu-item-object-page 39090 menu-item-39090"><a href="https://training.linuxfoundation.org/ai-machine-learning/">AI &#038; ML</a></li>
+		<li id="menu-item-36859" class="menu-item menu-item-type-post_type menu-item-object-page 36859 menu-item-36859"><a href="https://training.linuxfoundation.org/emerging-technologies/">Emerging Technologies</a></li>
+		<li id="menu-item-16487" class="menu-item menu-item-type-post_type menu-item-object-page 16487 menu-item-16487"><a href="https://training.linuxfoundation.org/networking/">Networking</a></li>
+		<li id="menu-item-16489" class="menu-item menu-item-type-post_type menu-item-object-page 16489 menu-item-16489"><a href="https://training.linuxfoundation.org/blockchain-decentralized-identity/">Blockchain &#038; Decentralized Identity</a></li>
+		<li id="menu-item-16490" class="menu-item menu-item-type-post_type menu-item-object-page 16490 menu-item-16490"><a href="https://training.linuxfoundation.org/linux-kernel-development/">Linux Kernel Development</a></li>
+		<li id="menu-item-16491" class="menu-item menu-item-type-post_type menu-item-object-page 16491 menu-item-16491"><a href="https://training.linuxfoundation.org/embedded-development/">IoT &#038; Embedded Development</a></li>
+		<li id="menu-item-16492" class="menu-item menu-item-type-post_type menu-item-object-page 16492 menu-item-16492"><a href="https://training.linuxfoundation.org/application-development/">Web &#038; Application Development</a></li>
+		<li id="menu-item-16493" class="menu-item menu-item-type-post_type menu-item-object-page 16493 menu-item-16493"><a href="https://training.linuxfoundation.org/systems-engineering/">Systems Engineering</a></li>
+		<li id="menu-item-16494" class="menu-item menu-item-type-post_type menu-item-object-page 16494 menu-item-16494"><a href="https://training.linuxfoundation.org/devops-site-reliability/">DevOps &#038; Site Reliability</a></li>
+		<li id="menu-item-16495" class="menu-item menu-item-type-post_type menu-item-object-page 16495 menu-item-16495"><a href="https://training.linuxfoundation.org/open-source-best-practice/">Open Source Best Practice</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children sf-with-ul 91 menu-item-91"><a href="https://training.linuxfoundation.org/resources/" aria-haspopup="true" aria-expanded="false">Resources<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1142" class="menu-item menu-item-type-custom menu-item-object-custom free-courses menu-item-1142"><a href="/resources/?_sft_content_type=free-course">Free Courses</a></li>
+	<li id="menu-item-44640" class="menu-item menu-item-type-post_type menu-item-object-page 44640 menu-item-44640"><a href="https://training.linuxfoundation.org/2026-state-of-tech-talent-report/">State of Tech Talent Report</a></li>
+	<li id="menu-item-6029" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent 6029 menu-item-6029"><a href="https://training.linuxfoundation.org/blog/">Blog</a></li>
+	<li id="menu-item-41454" class="menu-item menu-item-type-post_type menu-item-object-page 41454 menu-item-41454"><a href="https://training.linuxfoundation.org/lf-insider/">LF Insider</a></li>
+	<li id="menu-item-44740" class="menu-item menu-item-type-post_type menu-item-object-page 44740 menu-item-44740"><a href="https://training.linuxfoundation.org/care-program/">CARE Program</a></li>
+	<li id="menu-item-3669" class="menu-item menu-item-type-post_type menu-item-object-page 3669 menu-item-3669"><a href="https://training.linuxfoundation.org/resources/newsletter/">Newsletter Sign-Up</a></li>
+	<li id="menu-item-1143" class="menu-item menu-item-type-custom menu-item-object-custom webinars menu-item-1143"><a href="/resources/?_sft_content_type=webinars">Webinars</a></li>
+	<li id="menu-item-38503" class="menu-item menu-item-type-post_type menu-item-object-page 38503 menu-item-38503"><a href="https://training.linuxfoundation.org/cybersecurity-skills-framework/">Cybersecurity Skills Framework</a></li>
+	<li id="menu-item-18843" class="menu-item menu-item-type-post_type menu-item-object-page 18843 menu-item-18843"><a href="https://training.linuxfoundation.org/tux-rewards/">Tux Rewards</a></li>
+	<li id="menu-item-5250" class="menu-item menu-item-type-post_type menu-item-object-page 5250 menu-item-5250"><a href="https://training.linuxfoundation.org/badges-2/">Digital Badges</a></li>
+	<li id="menu-item-13930" class="menu-item menu-item-type-custom menu-item-object-custom support menu-item-13930"><a href="https://training.linuxfoundation.org/about/contact-us/">Support</a></li>
+</ul>
+</li>
+<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children sf-with-ul 273 menu-item-273"><a href="https://training.linuxfoundation.org/solutions/corporate-solutions/" aria-haspopup="true" aria-expanded="false">Corporate Solutions<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-43641" class="menu-item menu-item-type-post_type menu-item-object-page 43641 menu-item-43641"><a href="https://training.linuxfoundation.org/learning-solutions/">Learning Solutions</a></li>
+	<li id="menu-item-29772" class="menu-item menu-item-type-post_type menu-item-object-page 29772 menu-item-29772"><a href="https://training.linuxfoundation.org/delivery-options/">Delivery Options</a></li>
+	<li id="menu-item-29895" class="menu-item menu-item-type-post_type menu-item-object-page 29895 menu-item-29895"><a href="https://training.linuxfoundation.org/about/government-solutions/">Government Solutions</a></li>
+	<li id="menu-item-28819" class="menu-item menu-item-type-post_type menu-item-object-page 28819 menu-item-28819"><a href="https://training.linuxfoundation.org/security-workshops/">Security Workshops</a></li>
+	<li id="menu-item-20840" class="menu-item menu-item-type-post_type menu-item-object-page 20840 menu-item-20840"><a href="https://training.linuxfoundation.org/about/member-benefits/">Member Benefits</a></li>
+	<li id="menu-item-29780" class="menu-item menu-item-type-post_type menu-item-object-page 29780 menu-item-29780"><a href="https://training.linuxfoundation.org/awsmarketplace/">AWS Marketplace</a></li>
+</ul>
+</li>
+<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children sf-with-ul 92 lf-add-separator menu-item-92"><a href="https://training.linuxfoundation.org/about/" aria-haspopup="true" aria-expanded="false">Explore<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children 291 menu-item-291"><a href="https://training.linuxfoundation.org/training/plan-your-training/" aria-haspopup="true" aria-expanded="false">Plan Your IT Career<span class="sf-sub-indicator"><i class="fa fa-angle-right icon-in-menu"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-16607" class="menu-item menu-item-type-post_type menu-item-object-page 16607 menu-item-16607"><a href="https://training.linuxfoundation.org/training/plan-your-training/">Plan Your IT Career</a></li>
+		<li id="menu-item-20745" class="menu-item menu-item-type-post_type menu-item-object-page 20745 menu-item-20745"><a href="https://training.linuxfoundation.org/learning-paths/">Learning Paths</a></li>
+		<li id="menu-item-16605" class="menu-item menu-item-type-post_type menu-item-object-page 16605 menu-item-16605"><a href="https://training.linuxfoundation.org/it-career-roadmap/">IT Career Roadmap</a></li>
+		<li id="menu-item-31926" class="menu-item menu-item-type-post_type menu-item-object-page 31926 menu-item-31926"><a href="https://training.linuxfoundation.org/it-certification-journey/">IT Certification Journey</a></li>
+		<li id="menu-item-16606" class="menu-item menu-item-type-post_type menu-item-object-page 16606 menu-item-16606"><a href="https://training.linuxfoundation.org/training/career-path-quiz/">Career Path Quiz</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2720" class="menu-item menu-item-type-custom menu-item-object-custom get-instant-quote menu-item-2720"><a href="/training/quote/">Get Instant Quote</a></li>
+	<li id="menu-item-31566" class="menu-item menu-item-type-post_type menu-item-object-page 31566 menu-item-31566"><a href="https://training.linuxfoundation.org/about/affiliate-program/">Affiliate Program</a></li>
+	<li id="menu-item-290" class="menu-item menu-item-type-post_type menu-item-object-page 290 menu-item-290"><a href="https://training.linuxfoundation.org/training/regional-training/">Regional Training</a></li>
+	<li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page 3386 menu-item-3386"><a href="https://training.linuxfoundation.org/training/regional-training/classes/">Regional Class Schedule</a></li>
+	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page 97 menu-item-97"><a href="https://training.linuxfoundation.org/about/training-partner-program/">Training Partner Program</a></li>
+	<li id="menu-item-38017" class="menu-item menu-item-type-post_type menu-item-object-page 38017 menu-item-38017"><a href="https://training.linuxfoundation.org/resources/kubestronaut-program/">Kubestronaut &#038; Golden Kubestronaut</a></li>
+	<li id="menu-item-8637" class="menu-item menu-item-type-post_type menu-item-object-page 8637 menu-item-8637"><a href="https://training.linuxfoundation.org/certification/verify/">Verify Certification</a></li>
+	<li id="menu-item-25541" class="menu-item menu-item-type-post_type menu-item-object-page 25541 menu-item-25541"><a href="https://training.linuxfoundation.org/about/sme-instructors/">SMEs &#038; Instructors</a></li>
+	<li id="menu-item-25370" class="menu-item menu-item-type-post_type menu-item-object-page 25370 menu-item-25370"><a href="https://training.linuxfoundation.org/about/scholarships/">Scholarships</a></li>
+	<li id="menu-item-40971" class="menu-item menu-item-type-post_type menu-item-object-page 40971 menu-item-40971"><a href="https://training.linuxfoundation.org/about/academic-resources/">Academic Resources</a></li>
+	<li id="menu-item-43841" class="menu-item menu-item-type-post_type menu-item-object-page 43841 menu-item-43841"><a href="https://training.linuxfoundation.org/about/policies/">Policies</a></li>
+	<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page 94 menu-item-94"><a href="https://training.linuxfoundation.org/about/faqs/">FAQs</a></li>
+	<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page 93 menu-item-93"><a href="https://training.linuxfoundation.org/about/contact-us/">Contact Us-Support</a></li>
+	<li id="menu-item-15606" class="menu-item menu-item-type-post_type menu-item-object-page 15606 menu-item-15606"><a href="https://training.linuxfoundation.org/about/">About Us</a></li>
+</ul>
+</li>
+                    </ul>
+                </nav>
+
+							</div><!--/span_3-->
+
+			<div class="col span_9 col_last lf-menu-right">
+								<span class="lf-search-wrapper" style="position:relative;">
+						<form role="search" id="lf-search-form" class="lf-search-show" action="https://training.linuxfoundation.org/" method="GET">
+						<span class="lf-arrow-wrap"><span class="lf-arrow"></span></span>
+						<span id="lf-search-main">
+															<input type="text" name="s" id="s" value="" placeholder="Start Typing..." data-placeholder="Start Typing..." />
+															
+												</span>
+						</form>
+						<a class="lf-search" href="#searchbox">
+							<span class="nectar-icon icon-salient-search" aria-hidden="true"></span>
+						</a>
+					</span>
+														<span class="nectar-mobile-only"></span>
+													<div class="slide-out-widget-area-toggle mobile-icon simple" data-custom-color="false" data-icon-animation="simple-transform">
+						<div> <a href="#sidewidgetarea" aria-label="Navigation Menu" aria-expanded="false" class="closed">
+							<span class="screen-reader-text">Menu</span><span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span>
+						</a></div>
+					</div>
+				
+									<nav>
+													<ul class="sf-menu">
+								<li id="menu-item-10067" class="trp-language-switcher-container menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-has-children current-language-menu-item sf-with-ul 10067 menu-item-10067"><a href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg" aria-haspopup="true" aria-expanded="false"><span data-no-translation><img class="trp-flag-image" src="https://training.linuxfoundation.org/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png" width="18" height="12" alt="en_US" title="English"><span class="trp-ls-language-name">English</span></span><span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-8740" class="trp-language-switcher-container menu-item menu-item-type-post_type menu-item-object-language_switcher current-language-menu-item 8740 menu-item-8740"><a href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg"><span data-no-translation><img class="trp-flag-image" src="https://training.linuxfoundation.org/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"><span class="trp-ls-language-name">Japanese</span></span></a></li>
+</ul>
+</li>
+<li id="menu-item-15449" class="is-auth0 is-login-link only-anonymous menu-item menu-item-type-custom menu-item-object-custom sign-in menu-item-15449"><a href="#">My LF Profile</a></li>
+<li id="menu-item-15450" class="is-auth0 only-authenticated lf-my-profile menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children sf-with-ul my-profile menu-item-15450"><a href="#" aria-haspopup="true" aria-expanded="false">My LF Profile<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-15451" class="is-auth0 only-authenticated menu-item menu-item-type-custom menu-item-object-custom manage-profile menu-item-15451"><a href="https://myprofile.lfx.linuxfoundation.org/">Manage My LF Profile</a></li>
+	<li id="menu-item-15452" class="is-auth0 is-logout-link only-authenticated menu-item menu-item-type-custom menu-item-object-custom logout menu-item-15452"><a href="#">Logout</a></li>
+</ul>
+</li>
+<li id="menu-item-2519" class="menu-item menu-item-type-custom menu-item-object-custom my-portal menu-item-2519"><a target="_blank" href="https://trainingportal.linuxfoundation.org/access/saml/login">My Training Portal</a></li>
+							</ul>
+													<ul class="buttons sf-menu" data-user-set-ocm="1">
+
+								
+							</ul>
+						
+					</nav>
+
+									</div><!--/span_9-->
+
+				
+			</div><!--/row-->
+			
+<div id="mobile-menu" data-mobile-fixed="false">
+
+	<div class="inner">
+
+		
+		<div class="menu-items-wrap row" data-has-secondary-text="false">
+
+			<ul>
+				<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13811"><a href="/full-catalog/" aria-haspopup="true" aria-expanded="false">Catalog</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13822"><a href="/full-catalog/">See Full Catalog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936"><a href="https://training.linuxfoundation.org/certification-catalog/">Certifications</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38184"><a href="https://training.linuxfoundation.org/instructor-led-training-courses/">Instructor-led Courses</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24048"><a href="https://training.linuxfoundation.org/skillcred/">SkillCreds</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26843"><a href="https://training.linuxfoundation.org/subscriptions/">Subscriptions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-17664"><a href="https://training.linuxfoundation.org/technology-catalog/" aria-haspopup="true" aria-expanded="false">Search By Technology</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16488"><a href="https://training.linuxfoundation.org/cloud-containers/">Cloud &#038; Containers</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16475"><a href="https://training.linuxfoundation.org/system-administration/">System Administration</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20396"><a href="https://training.linuxfoundation.org/cybersecurity/">Cybersecurity</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39090"><a href="https://training.linuxfoundation.org/ai-machine-learning/">AI &#038; ML</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36859"><a href="https://training.linuxfoundation.org/emerging-technologies/">Emerging Technologies</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16487"><a href="https://training.linuxfoundation.org/networking/">Networking</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16489"><a href="https://training.linuxfoundation.org/blockchain-decentralized-identity/">Blockchain &#038; Decentralized Identity</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16490"><a href="https://training.linuxfoundation.org/linux-kernel-development/">Linux Kernel Development</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16491"><a href="https://training.linuxfoundation.org/embedded-development/">IoT &#038; Embedded Development</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16492"><a href="https://training.linuxfoundation.org/application-development/">Web &#038; Application Development</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16493"><a href="https://training.linuxfoundation.org/systems-engineering/">Systems Engineering</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16494"><a href="https://training.linuxfoundation.org/devops-site-reliability/">DevOps &#038; Site Reliability</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16495"><a href="https://training.linuxfoundation.org/open-source-best-practice/">Open Source Best Practice</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-91"><a href="https://training.linuxfoundation.org/resources/" aria-haspopup="true" aria-expanded="false">Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1142"><a href="/resources/?_sft_content_type=free-course">Free Courses</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44640"><a href="https://training.linuxfoundation.org/2026-state-of-tech-talent-report/">State of Tech Talent Report</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6029"><a href="https://training.linuxfoundation.org/blog/">Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41454"><a href="https://training.linuxfoundation.org/lf-insider/">LF Insider</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44740"><a href="https://training.linuxfoundation.org/care-program/">CARE Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3669"><a href="https://training.linuxfoundation.org/resources/newsletter/">Newsletter Sign-Up</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143"><a href="/resources/?_sft_content_type=webinars">Webinars</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38503"><a href="https://training.linuxfoundation.org/cybersecurity-skills-framework/">Cybersecurity Skills Framework</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18843"><a href="https://training.linuxfoundation.org/tux-rewards/">Tux Rewards</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5250"><a href="https://training.linuxfoundation.org/badges-2/">Digital Badges</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13930"><a href="https://training.linuxfoundation.org/about/contact-us/">Support</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-273"><a href="https://training.linuxfoundation.org/solutions/corporate-solutions/" aria-haspopup="true" aria-expanded="false">Corporate Solutions</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43641"><a href="https://training.linuxfoundation.org/learning-solutions/">Learning Solutions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29772"><a href="https://training.linuxfoundation.org/delivery-options/">Delivery Options</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29895"><a href="https://training.linuxfoundation.org/about/government-solutions/">Government Solutions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28819"><a href="https://training.linuxfoundation.org/security-workshops/">Security Workshops</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20840"><a href="https://training.linuxfoundation.org/about/member-benefits/">Member Benefits</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29780"><a href="https://training.linuxfoundation.org/awsmarketplace/">AWS Marketplace</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92"><a href="https://training.linuxfoundation.org/about/" aria-haspopup="true" aria-expanded="false">Explore</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-291"><a href="https://training.linuxfoundation.org/training/plan-your-training/" aria-haspopup="true" aria-expanded="false">Plan Your IT Career</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16607"><a href="https://training.linuxfoundation.org/training/plan-your-training/">Plan Your IT Career</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20745"><a href="https://training.linuxfoundation.org/learning-paths/">Learning Paths</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16605"><a href="https://training.linuxfoundation.org/it-career-roadmap/">IT Career Roadmap</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31926"><a href="https://training.linuxfoundation.org/it-certification-journey/">IT Certification Journey</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16606"><a href="https://training.linuxfoundation.org/training/career-path-quiz/">Career Path Quiz</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2720"><a href="/training/quote/">Get Instant Quote</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31566"><a href="https://training.linuxfoundation.org/about/affiliate-program/">Affiliate Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290"><a href="https://training.linuxfoundation.org/training/regional-training/">Regional Training</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3386"><a href="https://training.linuxfoundation.org/training/regional-training/classes/">Regional Class Schedule</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://training.linuxfoundation.org/about/training-partner-program/">Training Partner Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38017"><a href="https://training.linuxfoundation.org/resources/kubestronaut-program/">Kubestronaut &#038; Golden Kubestronaut</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8637"><a href="https://training.linuxfoundation.org/certification/verify/">Verify Certification</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25541"><a href="https://training.linuxfoundation.org/about/sme-instructors/">SMEs &#038; Instructors</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25370"><a href="https://training.linuxfoundation.org/about/scholarships/">Scholarships</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40971"><a href="https://training.linuxfoundation.org/about/academic-resources/">Academic Resources</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43841"><a href="https://training.linuxfoundation.org/about/policies/">Policies</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="https://training.linuxfoundation.org/about/faqs/">FAQs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="https://training.linuxfoundation.org/about/contact-us/">Contact Us-Support</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15606"><a href="https://training.linuxfoundation.org/about/">About Us</a></li>
+</ul>
+</li>
+<li class="trp-language-switcher-container menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-has-children current-language-menu-item menu-item-10067"><a href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg" aria-haspopup="true" aria-expanded="false"><span data-no-translation><img class="trp-flag-image" src="https://training.linuxfoundation.org/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png" width="18" height="12" alt="en_US" title="English"><span class="trp-ls-language-name">English</span></span></a>
+<ul class="sub-menu">
+	<li class="trp-language-switcher-container menu-item menu-item-type-post_type menu-item-object-language_switcher current-language-menu-item menu-item-8740"><a href="https://training.linuxfoundation.org/wp-content/uploads/2024/03/CKA-logo-color.svg"><span data-no-translation><img class="trp-flag-image" src="https://training.linuxfoundation.org/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"><span class="trp-ls-language-name">Japanese</span></span></a></li>
+</ul>
+</li>
+<li class="is-auth0 is-login-link only-anonymous menu-item menu-item-type-custom menu-item-object-custom menu-item-15449"><a href="#">My LF Profile</a></li>
+<li class="is-auth0 only-authenticated lf-my-profile menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15450"><a href="#" aria-haspopup="true" aria-expanded="false">My LF Profile</a>
+<ul class="sub-menu">
+	<li class="is-auth0 only-authenticated menu-item menu-item-type-custom menu-item-object-custom menu-item-15451"><a href="https://myprofile.lfx.linuxfoundation.org/">Manage My LF Profile</a></li>
+	<li class="is-auth0 is-logout-link only-authenticated menu-item menu-item-type-custom menu-item-object-custom menu-item-15452"><a href="#">Logout</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2519"><a target="_blank" href="https://trainingportal.linuxfoundation.org/access/saml/login">My Training Portal</a></li>
+
+
+			</ul>
+
+			
+		</div><!--/menu-items-wrap-->
+
+		<div class="below-menu-items-wrap">
+					</div><!--/below-menu-items-wrap-->
+
+	</div><!--/inner-->
+
+</div><!--/mobile-menu-->
+		</div><!--/container-->
+	</header>		
+	</div>
+	
+<div id="search-outer" class="nectar" data-nosnippet>
+	<div id="search">
+		<div class="container">
+			 <div id="search-box">
+				 <div class="inner-wrap">
+					 <div class="col span_12">
+						  <form role="search" action="https://training.linuxfoundation.org/" method="GET">
+															<input type="text" name="s"  value="Start Typing..." aria-label="Search" data-placeholder="Start Typing..." />
+							
+						<span><i>Press enter to begin your search</i></span>
+						<button aria-label="Search" class="search-box__button" type="submit">Search</button>						</form>
+					</div><!--/span_12-->
+				</div><!--/inner-wrap-->
+			 </div><!--/search-box-->
+			 <div id="close"><a href="#" role="button"><span class="screen-reader-text">Close Search</span>
+				<span class="icon-salient-x" aria-hidden="true"></span>				 </a></div>
+		 </div><!--/container-->
+	</div><!--/search-->
+</div><!--/search-outer-->
+	<div id="ajax-content-wrap">
+<div class="nectar-global-section after-nav" role="contentinfo"><div class="container normal-container row"></div></div>
+<div class="container-wrap">
+	
+		
+	<div class="container main-content">
+		
+		<div class="row">
+			
+			<div class="col span_12">
+				
+													<div id="error-404" 
+										>
+						<h1>404</h1>
+						<h2>Page Not Found</h2>
+						
+													<a class="nectar-button large regular-button accent-color has-icon" data-color-override="false" data-hover-color-override="false" href="https://training.linuxfoundation.org"><span>Back Home </span><i class="icon-button-arrow"></i></a>
+												</div>
+								
+			</div><!--/span_12-->
+			
+		</div><!--/row-->
+		
+	</div><!--/container-->
+	</div><!--/container-wrap-->
+
+<div id="footer-outer" data-midnight="light" data-cols="1" data-custom-color="true" data-disable-copyright="false" data-matching-section-color="false" data-copyright-line="false" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="true" data-link-hover="default"role="contentinfo">
+	
+		
+	<div id="footer-widgets" data-has-widgets="true" data-cols="1">
+		
+		<div class="container">
+			
+						
+			<div class="row">
+				
+								
+				<div class="col span_12">
+					<style type="text/css" data-type="vc_shortcodes-default-css">.vc_do_custom_heading{margin-bottom:0.625rem;margin-top:0;}</style><div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">
+		<div id="fws_6a614e5c38515"  data-column-margin="default" data-midnight="dark"  class="wpb_row vc_row-fluid vc_row"  style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer" ><div class="row-bg viewport-desktop"  style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				
+<div class="wpb_text_column wpb_content_element " >
+	<h4>Stay Up to Date</h4>
+<p>Get early access to the latest Linux Foundation Training news, tutorials and exclusive offers – available only for monthly newsletter subscribers.</p>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_6a614e5c3941c"  data-br="5px" data-br-applies="bg" data-column-margin="none" data-midnight="dark"  class="wpb_row vc_row-fluid vc_row vc_row-o-equal-height vc_row-flex vc_row-o-content-top lf-nl-footer right_padding_0px left_padding_0px"  style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="true"><div class="inner-wrap row-bg-layer using-image" ><div class="row-bg viewport-desktop using-image has-tablet has-phone"  style=""></div><div class="row-bg viewport-tablet using-image"  style="background-image: url(https://training.linuxfoundation.org/wp-content/uploads/2023/08/newsletter1.png); background-position: ; background-repeat: ; "></div><div class="row-bg viewport-phone using-image"  style="background-image: url(https://training.linuxfoundation.org/wp-content/uploads/2023/08/newsletter1.png); background-position: ; background-repeat: ; "></div></div><div class="row-bg-overlay row-bg-layer" style="background-color:#199ad6;  opacity: 0.3; "></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div  class="vc_col-sm-6 vc_col-lg-6 vc_col-md-6 wpb_column column_container vc_column_container col no-extra-padding force-desktop-text-align-left right_margin_0px left_margin_0px top_margin_tablet_0px top_margin_phone_0px bottom_margin_tablet_0px bottom_margin_phone_0px right_margin_tablet_0px right_margin_phone_0px left_margin_tablet_0px left_margin_phone_0px inherit_tablet inherit_phone "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div style="font-size: 23px;color: #ffffff;line-height: 28px;text-align: left" class="vc_custom_heading vc_do_custom_heading lf-owl-banner-big-content-title" >Get exclusive discounts, news, and more with our free newsletter</div>
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_1' ><div id='gf_1' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data'  id='gform_1'  action='/wp-content/uploads/2024/03/CKA-logo-color.svg#gf_1' data-formid='1' novalidate> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_1_1" class="gfield gfield--type-name gfield_contains_required field_sublabel_hidden_label gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' >Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_1_1'>
+                            
+                            <span id='input_1_1_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.3' id='input_1_1_3' value=''   aria-required='true'   placeholder='Name'  />
+                                                    <label for='input_1_1_3' class='gform-field-label gform-field-label--type-sub hidden_sub_label screen-reader-text'>First</label>
+                                                </span>
+                            
+                            <span id='input_1_1_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.6' id='input_1_1_6' value=''   aria-required='true'   placeholder='Last'  />
+                                                    <label for='input_1_1_6' class='gform-field-label gform-field-label--type-sub hidden_sub_label screen-reader-text'>Last</label>
+                                                </span>
+                            
+                        </div></li><li id="field_1_2" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_2'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_1_2' type='email' value='' class='medium'   placeholder='Your email' aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_1_7" class="gfield gfield--type-html gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div id="newsletter-json-data" style="display:none!important;">{"image":"/wp-content/themes/lf/images/newsletter.png"}</div></li><li id="field_1_9" class="gfield gfield--type-html gfield--width-full lf-captcha-copy gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_hidden"  ><span style="font-size:12px;display:inline-block;width:100%;text-align:left;margin-top:7px;"><img decoding="async" src="/wp-content/themes/lf/images/rec_logo_48.png" style="float: left;padding-right: 5px;margin-bottom: 0;height: 20px;">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</span></li><li id="field_1_5" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_5' id='input_1_5' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></li><li id="field_1_4" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_4' id='input_1_4' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></li><li id="field_1_3" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_3' id='input_1_3' type='hidden' class='gform_hidden'  aria-invalid="false" value='7012M000001nTU2' /></div></li><li id="field_1_10" class="gfield gfield--type-turnstile gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_turnstile'><div class="cf-turnstile" id="cf-turnstile_1" data-js-turnstile data-response-field-name="cf-turnstile-response_1" data-theme="light" data-size="" data-sitekey="0x4AAAAAAAHY4CW2pTn8Br-c"></div></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Submit'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_1' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_1' id='gform_theme_1' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_1' id='gform_style_settings_1' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='4zg7W82MGjBlIa6FK7dLeuUAOSXUy61iv7XjOv2Q92iMYMk5rDRXBbHLZ9Z8sU4q82DvhN7cvFz+eKE/sl1vzYnp+X+iGvK+LURgoAJNslSrRjc=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsIjI3ZWZlOGUzMDBhNzNkYmY3Y2QyZGExOWI1MmI2ZDVkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div><script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 1, '/wp-admin/images/loading.gif', true );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_1').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, '/wp-admin/images/loading.gif', true );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_1').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_1').text());}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+
+<div class="wpb_text_column wpb_content_element " >
+	<p><span style="color: #ffffff;">We won&#8217;t ever send you spam, promise.</span></p>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div style="" class="vc_col-sm-6 vc_col-lg-6 vc_col-md-6 vc_hidden-sm vc_hidden-xs wpb_column column_container vc_column_container col no-extra-padding right_margin_0px left_margin_0px inherit_tablet inherit_phone " data-using-bg="true" data-border-radius="5px" data-bg-cover="true" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" ><div class="column-image-bg-wrap column-bg-layer viewport-desktop" data-bg-pos="center center" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="column-image-bg" style="" data-nectar-img-src="https://training.linuxfoundation.org/wp-content/uploads/2023/08/newsletter1.png"></div></div></div>
+			<div class="wpb_wrapper">
+				
+			</div> 
+		</div>
+	</div> 
+</div></div>
+</div></div>					</div>
+					
+											
+						
+													
+															
+							</div>
+													</div><!--/container-->
+					</div><!--/footer-widgets-->
+					
+					
+  <div class="row" id="copyright" data-layout="default">
+
+	<div class="container">
+
+		
+	  <div class="col span_7 col_last">
+      <ul class="social">
+        <li><a target="_blank" rel="noopener" href="https://bsky.app/profile/lfeducation.bsky.social"><span class="screen-reader-text">bluesky</span><i class="nectar-brands-bluesky" aria-hidden="true"></i></a></li><li><a target="_blank" rel="noopener" href="https://www.facebook.com/TheLinuxFoundation"><span class="screen-reader-text">facebook</span><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a target="_blank" rel="noopener" href="https://www.linkedin.com/showcase/the-linux-foundation-training-&#038;-certification/"><span class="screen-reader-text">linkedin</span><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a target="_blank" rel="noopener" href="https://www.youtube.com/user/TheLinuxFoundation"><span class="screen-reader-text">youtube</span><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>      </ul>
+	  </div><!--/span_7-->
+
+	  		<div class="col span_5">
+						<div class="widget"></div>
+		<p>&copy; 2026 Linux Foundation - Education.  The Linux Foundation®. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.<br> <a href="https://www.linuxfoundation.org/terms/">Terms of Use</a> | <a href="https://www.linuxfoundation.org/privacy/">Privacy Policy</a> | <a href="https://www.linuxfoundation.org/bylaws/">Bylaws</a> | <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage</a> | <a href="https://www.linuxfoundation.org/antitrust-policy/">Antitrust Policy</a> | <a href="https://www.linuxfoundation.org/good-standing-policy/">Good Standing Policy</a><span class="accelerated-by" style="margin-left:-150px;padding-left:5px;display:block;position:relative;float:right">Accelerated by <a href="http://www.fastly.com" target="_blank"><img style="margin: 0 0 0 5px;top: 9px;position: relative" src="/wp-content/uploads/2018/07/fastly-logo.png" alt="Fastly" width="60px"></a></span></p>		</div><!--/span_5-->
+		
+	</div><!--/container-->
+  </div><!--/row-->
+		
+</div><!--/footer-outer-->
+
+
+</div> <!--/ajax-content-wrap-->
+
+	<a id="to-top" aria-label="Back to top" role="button" href="#" class="mobile-disabled"><i role="presentation" class="fa fa-angle-up"></i></a>
+	<template id="tp-language" data-tp-language="en_US"></template><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/lf/*","/wp-content/themes/salient/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div 
+	id="pum-16006" 
+	role="dialog" 
+	aria-modal="false"
+	class="pum pum-overlay pum-theme-7142 pum-theme-default-theme popmake-overlay pum-overlay-disabled auto_open click_open" 
+	data-popmake="{&quot;id&quot;:16006,&quot;slug&quot;:&quot;email-drawer&quot;,&quot;theme_id&quot;:7142,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_open&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;lf_email_drawer&quot;,&quot;key&quot;:&quot;&quot;,&quot;session&quot;:null,&quot;path&quot;:true,&quot;time&quot;:&quot;7 days&quot;}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;auto_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:[&quot;lf_email_drawer&quot;],&quot;delay&quot;:&quot;300&quot;}},{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:&quot;1&quot;,&quot;overlay_disabled&quot;:&quot;1&quot;,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;xlarge&quot;,&quot;responsive_min_width&quot;:&quot;100%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center bottom&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;10&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;animation_type&quot;:&quot;slide&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center bottom&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-16006" class="pum-container popmake theme-7142 pum-responsive pum-responsive-xlarge responsive size-xlarge pum-position-fixed">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<style>
+@media (max-width: 999px) {
+    #pum-16006 {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+}
+#pum-16006 .pum-close {
+    opacity: .3;
+    display: none;
+    font-size: 0px !important;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAgMzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNMjIuNSA3LjVMNy41IDIyLjUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjxwYXRoIGQ9Ik03LjUgNy41TDIyLjUgMjIuNSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+');
+    box-shadow: none;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+}
+#pum-16006 .pum-close:hover {
+    opacity: .6;
+}
+#lf-newsletter-drawer .pum-close {
+    display: block;
+}
+</style>
+<div id="lf-newsletter-drawer" class="lf-newsletter-drawer-new">
+<button type="button" class="pum-close popmake-close" aria-label="Close"></button></p>
+<div class="lf-newsletter-drawer-container">
+<div class="lf-newsletter-drawer-info">
+<h3>Sign up to get access to exclusive promotions, the latest trainings and news</h3>
+<p>Stay up to date with the newest courses, certifications, and promotions from the LF training team.</p>
+</div>
+<div class="lf-newsletter-drawer-form">
+
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_74' ><div id='gf_74' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_74' id='gform_74'  action='/wp-content/uploads/2024/03/CKA-logo-color.svg#gf_74' data-formid='74' novalidate> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><ul id='gform_fields_74' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_74_1" class="gfield gfield--type-name lf-newsletter-drawer-form-name gfield_contains_required field_sublabel_hidden_label gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' >Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_74_1'>
+                            
+                            <span id='input_74_1_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.3' id='input_74_1_3' value=''   aria-required='true'   placeholder='Name'  />
+                                                    <label for='input_74_1_3' class='gform-field-label gform-field-label--type-sub hidden_sub_label screen-reader-text'>First</label>
+                                                </span>
+                            
+                            <span id='input_74_1_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.6' id='input_74_1_6' value=''   aria-required='true'   placeholder='Last'  />
+                                                    <label for='input_74_1_6' class='gform-field-label gform-field-label--type-sub hidden_sub_label screen-reader-text'>Last</label>
+                                                </span>
+                            
+                        </div></li><li id="field_74_2" class="gfield gfield--type-email lf-newsletter-drawer-form-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_74_2'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_74_2' type='email' value='' class='medium'   placeholder='Your email' aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_74_10" class="gfield gfield--type-turnstile gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_turnstile'><div class="cf-turnstile" id="cf-turnstile_74" data-js-turnstile data-response-field-name="cf-turnstile-response_74" data-theme="light" data-size="" data-sitekey="0x4AAAAAAAHY4CW2pTn8Br-c"></div></div></li><li id="field_74_5" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_5' id='input_74_5' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></li><li id="field_74_4" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_4' id='input_74_4' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></li><li id="field_74_3" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_3' id='input_74_3' type='hidden' class='gform_hidden'  aria-invalid="false" value='7012M000001nTU2' /></div></li><li id="field_74_9" class="gfield gfield--type-html lf-newsletter-drawer-form-title gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><h3>Sign up to get access to exclusive promotions, the latest trainings and news</h3>
+<p>Stay up to date with the newest courses, certifications, and promotions from the LF training team.</p><style>#gform_wrapper_74 .gfield--type-turnstile {width: 220px;}</style></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_74' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Sign up'  /> <input type='hidden' name='gform_ajax' value='form_id=74&amp;title=&amp;description=&amp;tabindex=0&amp;theme=legacy&amp;styles=[]&amp;hash=e21d96e5968de3912bbeaf231c575897' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_74' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_74' id='gform_theme_74' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_74' id='gform_style_settings_74' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_74' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='74' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='qe96jl/WRygxk7DOcsYl2ZaqBZOgmIZNrSSLUUi7oA9mCbtM4VU26BJ7mk7jBOaRABU2aC+8Bt7ZQo0Oeyk8T0WEsQ10xdgtY7wxUDtvzyVvLgo=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_74' value='WyJbXSIsIjI3ZWZlOGUzMDBhNzNkYmY3Y2QyZGExOWI1MmI2ZDVkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_74' id='gform_target_page_number_74' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_74' id='gform_source_page_number_74' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_74' id='gform_ajax_frame_74' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 74, '/wp-admin/images/loading.gif', true );jQuery('#gform_ajax_frame_74').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_74');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_74').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_74').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_74').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_74').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_74').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_74').val();gformInitSpinner( 74, '/wp-admin/images/loading.gif', true );jQuery(document).trigger('gform_page_loaded', [74, current_page]);window['gf_submitting_74'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_74').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_74').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [74]);window['gf_submitting_74'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_74').text());}else{jQuery('#gform_74').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "74", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_74" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_74";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_74" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 74, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+
+</div>
+</div>
+</div>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			X			</button>
+		
+	</div>
+
+</div>
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH48PXP" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div class="lc-modal-overlay closed" id="lc-modal-overlay"></div>
+
+<div class="lc-modal closed" id="lc-modal">
+    <button class="lc-close-button" id="lc-close-button">X</button>
+    <div class="lc-modal-content-wrapper">
+        <div class="lc-modal-header">
+            <img src="https://training.linuxfoundation.org/wp-content/themes/lf/images/modal_logo.png"/>
+        </div>
+        <div class="lc-modal-content">
+            <p>Thank you for your interest in Linux Foundation training and certification. We think we can better serve you from our China Training site. To access this site please click below. </p>
+            <p>感谢您对Linux Foundation培训的关注。为了更好地为您服务，我们将您重定向到中国培训网站。
+                我们期待帮助您实现在中国区内所有类型的开源培训目标。</p>
+        </div>
+        <div class="lc-modal-cta">
+            <a href="https://training.linuxfoundation.cn/" class="btn btn-go-to-site">Go to Site 前往中文网站</a>
+            <a href="#" id="lc-close-link">Continue to English site</a>
+        </div>
+    </div>
+</div>
+
+<script>
+	function lfModal() {
+		var modal, modalOverlay, closeButton, closeLink;
+
+		function lfLanguageModalOpen() {
+			modal.classList.remove('closed');
+			modalOverlay.classList.remove('closed');
+		}
+
+		function lfLanguageModalClose() {
+			modal.classList.add('closed');
+			modalOverlay.classList.add('closed');
+			lfLanguageModalSetCookie('global_site', 'en', 30);
+		}
+
+		function lfLanguageModalSetCookie(name, value, days) {
+			var viewed_cookie_policy_check = lfLanguageModalGetCookie('viewed_cookie_policy');
+			if (viewed_cookie_policy_check && viewed_cookie_policy_check === 'yes') {
+				var expires = '';
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+					expires = '; expires=' + date.toUTCString();
+				}
+				document.cookie = name + '=' + (value || '') + expires + '; path=/';
+			}
+		}
+
+		function lfLanguageModalGetCookie(name) {
+			var nameEQ = name + '=';
+			var ca = document.cookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1, c.length);
+				}
+				if (c.indexOf(nameEQ) == 0) {
+					return c.substring(nameEQ.length, c.length);
+				}
+			}
+			return null;
+		}
+
+		function lfLanguageModalGetNavigatorLanguage() {
+			// navigator.languages:    Chrome & FF
+			// navigator.language:     Safari & Others
+			// navigator.userLanguage: IE & Others
+			if (window.navigator) {
+				return window.navigator.languages || [window.navigator.language || window.navigator.userLanguage];
+			}
+			else {
+				return ['en'];
+			}
+		}
+
+		function lfLanguageModalCheckLanguage() {
+			var targetLocale = ['zh', 'zh-CN', 'zh-HK', 'zh-MO', 'zh-SG', 'zh-TW'];
+			var userLanguage = lfLanguageModalGetNavigatorLanguage();
+			var result = null;
+			if (Array.isArray(userLanguage)) {
+				result = targetLocale.filter(value => userLanguage.includes(value));
+			}
+			else {
+				result = targetLocale.filter(value => userLanguage.indexOf(value) !== -1);
+			}
+
+			return result.length > 0;
+		}
+
+		function triggerModal() {
+			lfLanguageModalOpen();
+			closeLink.addEventListener('click', lfLanguageModalClose);
+			closeButton.addEventListener('click', lfLanguageModalClose);
+		}
+
+		return {
+			init: function() {
+				modal = document.querySelector('#lc-modal');
+				modalOverlay = document.querySelector('#lc-modal-overlay');
+				closeButton = document.querySelector('#lc-close-button');
+				closeLink = document.querySelector('#lc-close-link');
+
+				if (modal && modalOverlay && closeButton && closeLink) {
+					//Avoid to open if no Chinese language detected
+					var isChineseLanguageDetected = lfLanguageModalCheckLanguage();
+					if (isChineseLanguageDetected) {
+						//Avoid Open if cookie exist
+						var global_site_us_check = lfLanguageModalGetCookie('global_site');
+						if (global_site_us_check !== 'en') {
+                            triggerModal();
+						}
+					}
+					if(window.location.search.indexOf('fake_lang=zh') !== -1){
+						triggerModal();
+                    }
+				}
+			},
+		};
+	}
+
+	var lfModalFnc = lfModal();
+	lfModalFnc.init();
+</script><script id="wpb-modifications"> window.wpbCustomElement = 1; </script><script id="jquery-ui-core-js" src="https://training.linuxfoundation.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-menu-js" src="https://training.linuxfoundation.org/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.3"></script>
+<script id="wp-dom-ready-js" src="https://training.linuxfoundation.org/wp-includes/js/dist/dom-ready.min.js?ver=a06281ae5cf5500e9317"></script>
+<script id="wp-hooks-js" src="https://training.linuxfoundation.org/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://training.linuxfoundation.org/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-a11y-js" src="https://training.linuxfoundation.org/wp-includes/js/dist/a11y.min.js?ver=af934e5259bc51b8718e"></script>
+<script id="jquery-ui-autocomplete-js" src="https://training.linuxfoundation.org/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.3"></script>
+<script id="lf-search-js-extra">
+var LFAcSearch = {"url":"https://training.linuxfoundation.org/wp-admin/admin-ajax.php"};
+//# sourceURL=lf-search-js-extra
+</script>
+<script id="lf-search-js" src="https://training.linuxfoundation.org/wp-content/mu-plugins/lf/js/search.js?ver=1.2.1"></script>
+<script id="leadin-script-loader-js-js-extra">
+var leadin_wordpress = {"userRole":"visitor","pageType":"other","leadinPluginVersion":"11.3.45"};
+//# sourceURL=leadin-script-loader-js-js-extra
+</script>
+<script id="leadin-script-loader-js-js" src="https://js.hs-scripts.com/8112310.js?integration=WordPress&#038;ver=11.3.45"></script>
+<script id="gtm4wp-form-move-tracker-js" src="https://training.linuxfoundation.org/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3"></script>
+<script id="jquery-ui-datepicker-js" src="https://training.linuxfoundation.org/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+</script>
+<script id="lf-countdown-frontend-js" src="https://training.linuxfoundation.org/wp-content/plugins/lf-countdown/assets/js/frontend.js?ver=0.1.0"></script>
+<script id="jquery-easing-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/jquery.easing.min.js?ver=1.3"></script>
+<script id="nectar_priority-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/priority.js?ver=18.2.1"></script>
+<script id="nectar-transit-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/transit.min.js?ver=0.9.9"></script>
+<script id="nectar-waypoints-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/waypoints.js?ver=4.0.2"></script>
+<script id="imagesLoaded-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/imagesLoaded.min.js?ver=4.1.4"></script>
+<script id="hoverintent-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/hoverintent.min.js?ver=1.9"></script>
+<script id="magnific-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/magnific.js?ver=7.0.1"></script>
+<script id="anime-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/anime.min.js?ver=4.5.1"></script>
+<script id="flickity-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/flickity.js?ver=2.3.3"></script>
+<script id="superfish-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/third-party/superfish.js?ver=1.5.8"></script>
+<script id="nectar-frontend-js-extra">
+var nectarLove = {"ajaxurl":"https://training.linuxfoundation.org/wp-admin/admin-ajax.php","postID":"44897","rooturl":"https://training.linuxfoundation.org","disqusComments":"false","loveNonce":"a814bbca93","mapApiKey":""};
+var nectarOptions = {"delay_js":"false","smooth_scroll":"false","smooth_scroll_strength":"50","quick_search":"false","react_compat":"disabled","header_entrance":"false","body_border_func":"default","disable_box_roll_mobile":"false","body_border_mobile":"0","dropdown_hover_intent":"default","simplify_ocm_mobile":"0","mobile_header_format":"default","ocm_btn_position":"default","left_header_dropdown_func":"default","ajax_add_to_cart":"0","ocm_remove_ext_menu_items":"remove_images","woo_product_filter_toggle":"0","woo_sidebar_toggles":"true","woo_sticky_sidebar":"0","woo_minimal_product_hover":"default","woo_minimal_product_effect":"default","woo_related_upsell_carousel":"false","woo_product_variable_select":"default","woo_using_cart_addons":"false","view_transitions_effect":""};
+var nectar_front_i18n = {"menu":"Menu","next":"Next","previous":"Previous","close":"Close","slide_of":"Slide %1$s of %2$s","slide":"slide"};
+//# sourceURL=nectar-frontend-js-extra
+</script>
+<script id="nectar-frontend-js" src="https://training.linuxfoundation.org/wp-content/themes/salient/js/build/init.js?ver=18.2.1"></script>
+<script id="touchswipe-js" src="https://training.linuxfoundation.org/wp-content/plugins/salient-core/js/third-party/touchswipe.min.js?ver=3.1.5"></script>
+<script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"40f3094fab","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LcfXxojAAAAAOPsl-bAdmjZcuCpQXWZk4ydWHXd"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="gforms_recaptcha_recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LcfXxojAAAAAOPsl-bAdmjZcuCpQXWZk4ydWHXd&#038;ver=2.2.2"></script>
+<script data-wp-strategy="defer" defer id="gforms_recaptcha_frontend-js" src="https://training.linuxfoundation.org/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2"></script>
+<script id="gform_placeholder-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.10.3"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=7c651d0ba638ce98b9c65141edddd567"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"9a6a95d80286ccc4480ac89275ba74f2"},"ajax":{"ajaxurl":"https://training.linuxfoundation.org/wp-admin/admin-ajax.php","ajax_submission_nonce":"9c9d261aa7","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}}}},"hmr_dev":"","public_path":"https://training.linuxfoundation.org/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"4f44832074"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script id="gform_gravityforms_theme-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=301fdc9aa6144168f3b854c4c2c8f6d3"></script>
+<script id="gform_turnstile_vendor_theme-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityformsturnstile/assets/js/dist/vendor-theme.min.js?ver=1.5.0"></script>
+<script id="gform_turnstile_vendor_script-js" defer='defer' src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&#038;ver=7.0.2"></script>
+<script id="gform_turnstile_theme-js" defer='defer' src="https://training.linuxfoundation.org/wp-content/plugins/gravityformsturnstile/assets/js/dist/scripts-theme.min.js?ver=1.5.0"></script>
+<script id="popup-maker-site-js-extra">
+var pum_vars = {"version":"1.22.0","pm_dir_url":"https://training.linuxfoundation.org/wp-content/plugins/popup-maker/","ajaxurl":"https://training.linuxfoundation.org/wp-admin/admin-ajax.php","restapi":"https://training.linuxfoundation.org/wp-json/pum/v1","rest_nonce":null,"default_theme":"7142","debug_mode":"","disable_tracking":"1","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","paramNames":{"popup_id":"pid","cta":"cta","notrack":"notrack"}};
+var pum_sub_vars = {"ajaxurl":"https://training.linuxfoundation.org/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-16006":{"triggers":[{"type":"auto_open","settings":{"cookie_name":["lf_email_drawer"],"delay":"300"}}],"cookies":[{"event":"on_popup_open","settings":{"name":"lf_email_drawer","key":"","session":null,"path":true,"time":"7 days"}}],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"7142","size":"xlarge","responsive_min_width":"100%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"slide","animation_speed":"350","animation_origin":"center bottom","open_sound":"none","custom_sound":"","location":"center bottom","position_top":"100","position_bottom":"10","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":true,"overlay_disabled":true,"stackable":true,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":16006,"slug":"email-drawer"}};
+//# sourceURL=popup-maker-site-js-extra
+</script>
+<script id="popup-maker-site-js" src="//training.linuxfoundation.org/wp-content/uploads/pum/pum-site-scripts.js?defer&#038;generated=1757091076&#038;ver=1.22.0"></script>
+<script id="auth0-script-js" src="https://cdn.auth0.com/js/auth0-spa-js/1.13.3/auth0-spa-js.production.js?ver=1.13.3"></script>
+<script id="auth0-lf-script-js" src="https://cdn.dev.platform.linuxfoundation.org/wordpress-auth0.js?ver=0.0.13"></script>
+<script id="featherlight-script-js" src="https://training.linuxfoundation.org/wp-content/themes/lf/js/featherlight.js?ver=1.8.10"></script>
+<script id="owl-home-script-js" src="https://training.linuxfoundation.org/wp-content/themes/lf/js/owl-home-script.js?ver=1.8.10"></script>
+<script id="owl-menu-script-js" src="https://training.linuxfoundation.org/wp-content/themes/lf/js/owl-menu-script.js?ver=1.8.10"></script>
+<script id="lf-email-drawer-js" src="https://training.linuxfoundation.org/wp-content/themes/lf/js/lf-newsletter-drawer.js?ver=1.8.10"></script>
+<script id="wpb_composer_front_js-js" src="https://training.linuxfoundation.org/wp-content/plugins/js_composer_salient/assets/js/dist/js_composer_front.min.js?ver=8.7.3"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://training.linuxfoundation.org/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://training.linuxfoundation.org/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script></script>
+		<script>
+		  var config = {"domain":"sso.linuxfoundation.org","clientId":"kGM9SSZ7VMv9fROc1D5mpbVeIUwQhXrE"};
+		  WordpressAuth0SPALibInit(config);
+		</script>
+	<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 74) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }jQuery(document).ready(function(){ $wrapper = jQuery("#gform_wrapper_74"); $wrapper.find(".gf_icon_after .gfsp_icon").each(function() { jQuery(this).next().after(this); });  $wrapper.find(".gf_icon_after .ginput_container_date .gfsp_icon, .gf_icon_after .ginput_container_time .gfsp_icon").each(function() { jQuery(this).closest(".ginput_container").siblings(":last").find("input, select").after(this); }) });} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "74", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_74" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_74";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_74" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 74, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }jQuery(document).ready(function(){ $wrapper = jQuery("#gform_wrapper_1"); $wrapper.find(".gf_icon_after .gfsp_icon").each(function() { jQuery(this).next().after(this); });  $wrapper.find(".gf_icon_after .ginput_container_date .gfsp_icon, .gf_icon_after .ginput_container_time .gfsp_icon").each(function() { jQuery(this).closest(".ginput_container").siblings(":last").find("input, select").after(this); }) });} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"480e70c430","applicationID":"67333701","transactionName":"ZFUGZxRTXhUFARYKXV0fJVASW18IS1ZSVw==","queueTime":0,"applicationTime":1225,"atts":"SBIFEVxJTRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<!-- plugin=object-cache-pro client=phpredis metric#hits=17639 metric#misses=72 metric#hit-ratio=99.6 metric#bytes=6588683 metric#prefetches=0 metric#store-reads=161 metric#store-writes=12 metric#store-hits=542 metric#store-misses=12 metric#sql-queries=64 metric#ms-total=1218.11 metric#ms-cache=188.31 metric#ms-cache-avg=1.0948 metric#ms-cache-ratio=15.5 -->
